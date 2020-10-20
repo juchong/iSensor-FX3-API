@@ -423,7 +423,7 @@ CyU3PReturnStatus_t AdiRealTimeStreamStart()
 	/* Configure RTS channel DMA */
 	CyU3PMemSet((uint8_t *)&dmaConfig, 0, sizeof(dmaConfig));
 	dmaConfig.size 				= FX3State.UsbBufferSize;
-	dmaConfig.count 			= 32;
+	dmaConfig.count 			= 64;
 	dmaConfig.prodSckId 		= CY_U3P_LPP_SOCKET_SPI_PROD;
 	dmaConfig.consSckId 		= CY_U3P_UIB_SOCKET_CONS_1;
 	dmaConfig.dmaMode 			= CY_U3P_DMA_MODE_BYTE;
