@@ -233,6 +233,8 @@ Public Enum DeviceType
     ADcmXL
     'Automotive grade part (32 bit SPI with CRC)
     AutomotiveSpi
+    'Inertial component sensor
+    ComponentSensor
 End Enum
 
 ''' <summary>
@@ -605,6 +607,12 @@ Public Class FX3SPIConfig
             ClockFrequency = 2000000
             WordLength = 16
             m_StallTime = 15
+            DUTType = DUTType.IMU
+        ElseIf SensorType = DeviceType.ComponentSensor Then
+            'component sensor. SPI protocol must be set up later. 5MHz sclk / 5us stall should work for all
+            ClockFrequency = 5000000
+            m_StallTime = 5
+            WordLength = 16
             DUTType = DUTType.IMU
         Else
             'Automotive IMU with iSensorAutomotiveSpi protocol
