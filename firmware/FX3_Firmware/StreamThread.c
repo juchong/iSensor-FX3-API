@@ -601,7 +601,7 @@ static CyU3PReturnStatus_t AdiTransferStreamWork()
 	}
 
 	/* Check the number of bytes per SPI transfer */
-	bytesPerSpiTransfer = FX3State.SpiConfig.wordLen >> 3;
+	bytesPerSpiTransfer = 4;
 
 	/* Wait for DR if enabled */
 	if (FX3State.DrActive)
