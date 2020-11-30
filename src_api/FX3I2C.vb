@@ -1,4 +1,7 @@
-﻿'File:         FX3I2C.vb
+﻿'Copyright (c) 2018-2020 Analog Devices, Inc. All Rights Reserved.
+'This software is proprietary to Analog Devices, Inc. and its licensors.
+'
+'File:         FX3I2C.vb
 'Author:       Alex Nolan (alex.nolan@analog.com)
 'Date:         5/13/2020
 'Description:  I2C interfacing for the FX3

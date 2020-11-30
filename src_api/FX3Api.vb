@@ -1,4 +1,7 @@
-﻿'File:          FX3Api.vb
+﻿'Copyright (c) 2018-2020 Analog Devices, Inc. All Rights Reserved.
+'This software is proprietary to Analog Devices, Inc. and its licensors.
+'
+'File:          FX3Api.vb
 'Author:        Alex Nolan (alex.nolan@analog.com), Juan Chong (juan.chong@analog.com)
 'Date:          05/16/2019
 'Description:   Main interfacing library for the Cypress FX3 based eval platform. FX3Connection implements

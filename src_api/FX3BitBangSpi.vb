@@ -1,4 +1,7 @@
-﻿'File:          FX3BitBangSpi.vb
+﻿'Copyright (c) 2018-2020 Analog Devices, Inc. All Rights Reserved.
+'This software is proprietary to Analog Devices, Inc. and its licensors.
+'
+'File:          FX3BitBangSpi.vb
 'Author:        Alex Nolan (alex.nolan@analog.com)
 'Date:          08/27/2019
 'Description:   This file contains all the interfacing functions for the FX3 SPI bitbang capabilities.

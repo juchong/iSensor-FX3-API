@@ -1,4 +1,7 @@
-﻿'File:         FX3DataStructures.vb
+﻿'Copyright (c) 2018-2020 Analog Devices, Inc. All Rights Reserved.
+'This software is proprietary to Analog Devices, Inc. and its licensors.
+'
+'File:         FX3DataStructures.vb
 'Author:       Alex Nolan (alex.nolan@analog.com), Juan Chong (juan.chong@analog.com)
 'Date:         7/31/2018     
 'Description:  Collection of helper data structures used in the FX3Connection 

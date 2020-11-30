@@ -1,4 +1,7 @@
-﻿'File:         FX3ErrorLog.vb
+﻿'Copyright (c) 2018-2020 Analog Devices, Inc. All Rights Reserved.
+'This software is proprietary to Analog Devices, Inc. and its licensors.
+'
+'File:         FX3ErrorLog.vb
 'Author:       Alex Nolan (alex.nolan@analog.com)
 'Date:         5/1/2020     
 'Description:  Error logging for FX3 firmware

@@ -1,4 +1,7 @@
-﻿'File:          FX3PinObject.vb
+﻿'Copyright (c) 2018-2020 Analog Devices, Inc. All Rights Reserved.
+'This software is proprietary to Analog Devices, Inc. and its licensors.
+'
+'File:          FX3PinObject.vb
 'Author:        Alex Nolan (alex.nolan@analog.com), Juan Chong (juan.chong@analog.com)
 'Date:          6/21/2019
 'Description:   This is an implementation of the ADIS API IPinObject specific to the FX3 pin structure.

@@ -1,4 +1,7 @@
-﻿'File:          FX3Spi32.vb
+﻿'Copyright (c) 2018-2020 Analog Devices, Inc. All Rights Reserved.
+'This software is proprietary to Analog Devices, Inc. and its licensors.
+'
+'File:          FX3Spi32.vb
 'Author:        Alex Nolan (alex.nolan@analog.com), Juan Chong (juan.chong@analog.com)
 'Date:          07/15/2019
 'Description:   This file contains all the implementation functions for the ISpi32Interface, which allows for a protocol agnostic interface to the SPI bus.

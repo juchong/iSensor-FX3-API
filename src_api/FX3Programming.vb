@@ -1,4 +1,7 @@
-﻿'File:          FX3Programming.vb
+﻿'Copyright (c) 2018-2020 Analog Devices, Inc. All Rights Reserved.
+'This software is proprietary to Analog Devices, Inc. and its licensors.
+'
+'File:          FX3Programming.vb
 'Author:        Alex Nolan (alex.nolan@analog.com), Juan Chong (juan.chong@analog.com)
 'Date:          6/10/2019
 'Description:   This file is an extension of the primary FX3 Connection class. It contains all the functions
