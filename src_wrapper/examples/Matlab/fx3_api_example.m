@@ -1,3 +1,8 @@
+%Copyright (c) 2018-2020 Analog Devices, Inc. All Rights Reserved.
+%This software is proprietary to Analog Devices, Inc. and its licensors.
+%
+%Authors: Alex Nolan, Juan Chong
+
 clear
 
 %Watch for user inputs to exit code execution
