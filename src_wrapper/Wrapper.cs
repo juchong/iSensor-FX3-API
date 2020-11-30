@@ -1,11 +1,18 @@
-﻿using System;
+﻿/*
+ * Copyright (c) 2018-2020 Analog Devices, Inc. All Rights Reserved.
+ * This software is proprietary to Analog Devices, Inc. and its licensors.
+ * 
+ * File:        Wrapper.cs
+ * Author:      Alex Nolan (alex.nolan@analog.com)
+ * Description: Wrapper class to allow easy consumption of the FX3Api in Labview, Matlab, and Python
+ */
+
+using System;
 using System.Linq;
 using FX3Api;
-using System.Runtime.InteropServices;
 using System.Collections.Generic;
 using RegMapClasses;
 using adisInterface;
-using System.Runtime.Remoting;
 
 namespace FX3ApiWrapper
 {
