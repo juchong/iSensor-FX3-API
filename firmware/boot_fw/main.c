@@ -1,24 +1,20 @@
-/*
- ## Cypress FX3 Boot Firmware Example Source file (main.c)
- ## ===========================
- ##
- ##  Copyright Cypress Semiconductor Corporation, 2010-2018,
- ##  All Rights Reserved
- ##  UNPUBLISHED, LICENSED SOFTWARE.
- ##
- ##  CONFIDENTIAL AND PROPRIETARY INFORMATION
- ##  WHICH IS THE PROPERTY OF CYPRESS.
- ##
- ##  Use of this file is governed
- ##  by the license agreement included in the file
- ##
- ##     <install>/license/license.txt
- ##
- ##  where <install> is the Cypress software
- ##  installation root directory path.
- ##
- ## ===========================
-*/
+/**
+  * Copyright (c) 2018-2020 Analog Devices, Inc. All Rights Reserved.
+  * This software is proprietary to Analog Devices, Inc. and its licensors.
+  *
+  * THIS SOFTWARE UTILIZES LIBRARIES DEVELOPED
+  * AND MAINTAINED BY CYPRESS INC. THE LICENSE INCLUDED IN
+  * THIS REPOSITORY DOES NOT EXTEND TO CYPRESS PROPERTY.
+  *
+  * Use of this file is governed by the license agreement
+  * included in this repository.
+  *
+  * @file		main.c
+  * @date		8/1/2019
+  * @author		A. Nolan (alex.nolan@analog.com)
+  * @author 	J. Chong (juan.chong@analog.com)
+  * @brief 		Entry point for the Analog Devices iSensor FX3 Demonstration Platform USB bootloader.
+ **/
 
 #include "cyfx3usb.h"
 #include "cyfx3device.h"

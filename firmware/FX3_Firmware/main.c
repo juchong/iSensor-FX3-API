@@ -1,6 +1,6 @@
 /**
-  * Copyright (c) Analog Devices Inc, 2018 - 2020
-  * All Rights Reserved.
+  * Copyright (c) 2018-2020 Analog Devices, Inc. All Rights Reserved.
+  * This software is proprietary to Analog Devices, Inc. and its licensors.
   * 
   * THIS SOFTWARE UTILIZES LIBRARIES DEVELOPED
   * AND MAINTAINED BY CYPRESS INC. THE LICENSE INCLUDED IN

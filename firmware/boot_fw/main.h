@@ -1,9 +1,20 @@
-/*
- * main.h
- *
- *  Created on: May 8, 2019
- *      Author: jchong
- */
+/**
+  * Copyright (c) 2018-2020 Analog Devices, Inc. All Rights Reserved.
+  * This software is proprietary to Analog Devices, Inc. and its licensors.
+  *
+  * THIS SOFTWARE UTILIZES LIBRARIES DEVELOPED
+  * AND MAINTAINED BY CYPRESS INC. THE LICENSE INCLUDED IN
+  * THIS REPOSITORY DOES NOT EXTEND TO CYPRESS PROPERTY.
+  *
+  * Use of this file is governed by the license agreement
+  * included in this repository.
+  *
+  * @file		main.h
+  * @date		8/1/2019
+  * @author		A. Nolan (alex.nolan@analog.com)
+  * @author 	J. Chong (juan.chong@analog.com)
+  * @brief 		Main header file for the Analog Devices iSensor FX3 Demonstration Platform USB bootloader.
+ **/
 
 #ifndef MAIN_H_
 #define MAIN_H_
