@@ -53,27 +53,37 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="adisApi">
-      <HintPath>Resources\adisApi.dll</HintPath>
+    <Reference Include="adisApi, Version=1.2.0.999, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\resources\adisApi.dll</HintPath>
     </Reference>
-    <Reference Include="adisInterface">
-      <HintPath>Resources\adisInterface.dll</HintPath>
+    <Reference Include="adisInterface, Version=1.1.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\resources\adisInterface.dll</HintPath>
     </Reference>
-    <Reference Include="CyUSB">
-      <HintPath>Resources\CyUSB.dll</HintPath>
+    <Reference Include="CyUSB, Version=1.2.3.0, Culture=neutral, PublicKeyToken=01f1d2b6c851ae92, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\resources\CyUSB.dll</HintPath>
     </Reference>
-    <Reference Include="FX3Api">
-      <HintPath>Resources\FX3Api.dll</HintPath>
+    <Reference Include="FX3Api, Version=2.9.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\resources\FX3Api.dll</HintPath>
     </Reference>
-    <Reference Include="FX3USB">
-      <HintPath>Resources\FX3USB.dll</HintPath>
+    <Reference Include="FX3ApiWrapper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\resources\FX3ApiWrapper.dll</HintPath>
     </Reference>
-    <Reference Include="RegMapClasses">
-      <HintPath>Resources\RegMapClasses.dll</HintPath>
+    <Reference Include="FX3USB, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\resources\FX3USB.dll</HintPath>
+    </Reference>
+    <Reference Include="RegMapClasses, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\resources\RegMapClasses.dll</HintPath>
     </Reference>
     <Reference Include="StreamDataLogger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>Resources\StreamDataLogger.dll</HintPath>
+      <HintPath>..\resources\StreamDataLogger.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -113,19 +123,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="src\FX3Api.vb" />
-    <Compile Include="src\FX3BitBangSpi.vb" />
-    <Compile Include="src\FX3Burst.vb" />
-    <Compile Include="src\FX3DataStreaming.vb" />
-    <Compile Include="src\FX3DataStructures.vb" />
-    <Compile Include="src\FX3ErrorLog.vb" />
-    <Compile Include="src\FX3Exceptions.vb" />
-    <Compile Include="src\FX3I2C.vb" />
-    <Compile Include="src\FX3IPinFcns.vb" />
-    <Compile Include="src\FX3IRegInterface.vb" />
-    <Compile Include="src\FX3PinObject.vb" />
-    <Compile Include="src\FX3Programming.vb" />
-    <Compile Include="src\FX3Spi32.vb" />
+    <Compile Include="FX3Api.vb" />
+    <Compile Include="FX3BitBangSpi.vb" />
+    <Compile Include="FX3Burst.vb" />
+    <Compile Include="FX3DataStreaming.vb" />
+    <Compile Include="FX3DataStructures.vb" />
+    <Compile Include="FX3ErrorLog.vb" />
+    <Compile Include="FX3Exceptions.vb" />
+    <Compile Include="FX3I2C.vb" />
+    <Compile Include="FX3IPinFcns.vb" />
+    <Compile Include="FX3IRegInterface.vb" />
+    <Compile Include="FX3PinObject.vb" />
+    <Compile Include="FX3Programming.vb" />
+    <Compile Include="FX3Spi32.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -145,19 +155,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="src\app.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\adisApi.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\adisInterface.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\CyUSB.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\RegMapClasses.dll" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="bin\BuildDate.txt" />
@@ -173,27 +170,37 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy /Y "$(ProjectDir)\bin\Debug\FX3Api.dll" "$(ProjectDir)\Resources\FX3Api.dll"
-copy /Y "$(ProjectDir)\bin\Debug\FX3Api.xml" "$(ProjectDir)\Resources\FX3Api.xml"</PostBuildEvent>
+    <PostBuildEvent>copy /Y "$(ProjectDir)\bin\Debug\FX3Api.dll" "$(ProjectDir)..\resources\FX3Api.dll"
+copy /Y "$(ProjectDir)\bin\Debug\FX3Api.xml" "$(ProjectDir)..\resources\FX3Api.xml"</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PreBuildEvent>echo %25date%25 %25time%25 &gt; "$(ProjectDir)\Bin\BuildDate.txt"
-if EXIST "$(ProjectDir)\.git\HEAD" (
-git rev-parse HEAD &gt; "$(ProjectDir)\Bin\CurrentCommit.txt"
-git rev-parse --symbolic-full-name --abbrev-ref HEAD &gt; "$(ProjectDir)\Bin\CurrentBranch.txt"
-git config --get remote.origin.url &gt; "$(ProjectDir)\Bin\CurrentURL.txt"
+    <PreBuildEvent>echo %25date%25 %25time%25 &gt; "$(ProjectDir)bin\BuildDate.txt"
+if EXIST "$(ProjectDir)..\.git\HEAD" (
+git rev-parse HEAD &gt; "$(ProjectDir)bin\CurrentCommit.txt"
+git rev-parse --symbolic-full-name --abbrev-ref HEAD &gt; "$(ProjectDir)bin\CurrentBranch.txt"
+git config --get remote.origin.url &gt; "$(ProjectDir)bin\CurrentURL.txt"
 ) else (
-echo Error: No Git Repository Found &gt; "$(ProjectDir)\Bin\CurrentCommit.txt"
-echo Error: No Git Repository Found &gt; "$(ProjectDir)\Bin\CurrentBranch.txt"
-echo Error: No Git Repository Found &gt; "$(ProjectDir)\Bin\CurrentURL.txt"
+echo Error: No Git Repository Found &gt; "$(ProjectDir)bin\CurrentCommit.txt"
+echo Error: No Git Repository Found &gt; "$(ProjectDir)bin\CurrentBranch.txt"
+echo Error: No Git Repository Found &gt; "$(ProjectDir)bin\CurrentURL.txt"
 )
 
-if EXIST "$(ProjectDir)\firmware\FX3_Firmware\Release\FX3_Firmware.img" (
-copy /Y "$(ProjectDir)\firmware\FX3_firmware\Release\FX3_Firmware.img" "$(ProjectDir)\Resources\FX3_Firmware.img"
-copy /Y "$(ProjectDir)\firmware\boot_fw\Debug\boot_fw.img" "$(ProjectDir)\Resources\boot_fw.img"
-copy /Y "$(ProjectDir)\firmware\cyfxflashprog\Debug\USBFlashProg.img" "$(ProjectDir)\Resources\USBFlashProg.img"
+if EXIST "$(ProjectDir)..\firmware\FX3_Firmware\Release\FX3_Firmware.img" (
+copy /Y "$(ProjectDir)..\firmware\FX3_firmware\Release\FX3_Firmware.img" "$(ProjectDir)..\resources\FX3_Firmware.img"
 ) else (
-echo Firmware image not found
+echo Application firmware image not found
+)
+
+if EXIST "$(ProjectDir)..\firmware\boot_fw\Debug\boot_fw.img" (
+copy /Y "$(ProjectDir)..\firmware\boot_fw\Debug\boot_fw.img" "$(ProjectDir)..\resources\boot_fw.img"
+) else (
+echo Boot firmware image not found
+)
+
+if EXIST "$(ProjectDir)..\firmware\cyfxflashprog\Debug\USBFlashProg.img" (
+copy /Y "$(ProjectDir)..\firmware\cyfxflashprog\Debug\USBFlashProg.img" "$(ProjectDir)..\resources\USBFlashProg.img"
+) else (
+echo USB flash image not found
 )</PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

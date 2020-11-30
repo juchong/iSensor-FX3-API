@@ -2,6 +2,10 @@
 *.o
 *.d
 *.elf
+*.map
+*.mk
+makefile
+*.img
 
 .settings/
 [Dd]ebug/
