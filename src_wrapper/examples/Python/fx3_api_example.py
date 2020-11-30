@@ -1,7 +1,17 @@
+#Copyright (c) 2018-2020 Analog Devices, Inc. All Rights Reserved.
+#This software is proprietary to Analog Devices, Inc. and its licensors.
+#
+#Author: Alex Nolan
+
 #requires pythonnet to be installed (pip install pythonnet)
 
 import clr
+import os
 from time import sleep
+
+#get path to resources folder and dll
+resourcePath = os.path.join(os.getcwd(), "..\..\..\resources")
+print(resourcePath)
 
 #Load FX3 API Wrapper DLL
 clr.AddReference('C:\\Users\\anolan3\\Documents\\iSensor-FX3-API\\FX3ApiWrapper\\bin\\Debug\\FX3ApiWrapper.dll')
