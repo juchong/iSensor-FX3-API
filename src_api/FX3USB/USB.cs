@@ -1,4 +1,15 @@
-﻿using CyUSB;
+﻿/*
+ * Copyright (c) 2018-2020 Analog Devices, Inc. All Rights Reserved.
+ * This software is proprietary to Analog Devices, Inc. and its licensors.
+ * 
+ * File:        USB.cs
+ * Author:      Alex Nolan (alex.nolan@analog.com)
+ * Description: Custom implementation of CyUSBEndPoint XferData which resolves an issue where
+ *              a transfer could fault due to the garbage collector moving the allocated buffer
+ *              while the transfer is in progress.
+ */
+
+using CyUSB;
 using System.Runtime.InteropServices;
 
 namespace FX3USB
