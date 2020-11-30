@@ -34,25 +34,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="adisApi">
-      <HintPath>..\iSensor-FX3-API\Resources\adisApi.dll</HintPath>
+      <HintPath>..\resources\adisApi.dll</HintPath>
     </Reference>
     <Reference Include="adisInterface">
-      <HintPath>..\iSensor-FX3-API\Resources\adisInterface.dll</HintPath>
+      <HintPath>..\resources\adisInterface.dll</HintPath>
     </Reference>
     <Reference Include="CyUSB">
-      <HintPath>..\iSensor-FX3-API\Resources\CyUSB.dll</HintPath>
+      <HintPath>..\resources\CyUSB.dll</HintPath>
     </Reference>
     <Reference Include="FX3Api">
-      <HintPath>..\iSensor-FX3-API\Resources\FX3Api.dll</HintPath>
+      <HintPath>..\resources\FX3Api.dll</HintPath>
     </Reference>
     <Reference Include="FX3USB">
-      <HintPath>..\iSensor-FX3-API\Resources\FX3USB.dll</HintPath>
+      <HintPath>..\resources\FX3USB.dll</HintPath>
     </Reference>
     <Reference Include="RegMapClasses">
-      <HintPath>..\iSensor-FX3-API\Resources\RegMapClasses.dll</HintPath>
+      <HintPath>..\resources\RegMapClasses.dll</HintPath>
     </Reference>
     <Reference Include="StreamDataLogger">
-      <HintPath>..\iSensor-FX3-API\Resources\StreamDataLogger.dll</HintPath>
+      <HintPath>..\resources\StreamDataLogger.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -66,15 +66,78 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GenericRegInterface.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Wrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy /Y "$(TargetDir)\FX3ApiWrapper.dll" "$(ProjectDir)\Resources\FX3ApiWrapper.dll"
-copy /Y "$(TargetDir)\FX3ApiWrapper.xml" "$(ProjectDir)\Resources\FX3ApiWrapper.xml"
-copy /Y "$(TargetDir)\FX3ApiWrapper.dll" "$(ProjectDir)\LabVIEW\Resources\FX3ApiWrapper.dll"
-copy /Y "$(TargetDir)\FX3ApiWrapper.xml" "$(ProjectDir)\LabVIEW\Resources\FX3ApiWrapper.xml"</PostBuildEvent>
+    <PostBuildEvent>copy /Y "$(TargetDir)\FX3ApiWrapper.dll" "$(ProjectDir)\examples\LabVIEW\Resources\FX3ApiWrapper.dll"
+copy /Y "$(TargetDir)\FX3ApiWrapper.xml" "$(ProjectDir)\examples\LabVIEW\Resources\FX3ApiWrapper.xml"
+copy /Y "$(ProjectDir)..\resources\adisApi.dll" "$(ProjectDir)\examples\LabVIEW\Resources\adisApi.dll"
+copy /Y "$(ProjectDir)..\resources\adisApi.xml" "$(ProjectDir)\examples\LabVIEW\Resources\adisApi.xml"
+copy /Y "$(ProjectDir)..\resources\adisInterface.dll" "$(ProjectDir)\examples\LabVIEW\Resources\adisInterface.dll"
+copy /Y "$(ProjectDir)..\resources\adisInterface.xml" "$(ProjectDir)\examples\LabVIEW\Resources\adisInterface.xml"
+copy /Y "$(ProjectDir)..\resources\CyUSB.dll" "$(ProjectDir)\examples\LabVIEW\Resources\CyUSB.dll"
+copy /Y "$(ProjectDir)..\resources\FX3Api.dll" "$(ProjectDir)\examples\LabVIEW\Resources\FX3Api.dll"
+copy /Y "$(ProjectDir)..\resources\FX3Api.xml" "$(ProjectDir)\examples\LabVIEW\Resources\FX3Api.xml"
+copy /Y "$(ProjectDir)..\resources\FX3USB.dll" "$(ProjectDir)\examples\LabVIEW\Resources\FX3USB.dll"
+copy /Y "$(ProjectDir)..\resources\FX3USB.xml" "$(ProjectDir)\examples\LabVIEW\Resources\FX3USB.xml"
+copy /Y "$(ProjectDir)..\resources\RegMapClasses.dll" "$(ProjectDir)\examples\LabVIEW\Resources\RegMapClasses.dll"
+copy /Y "$(ProjectDir)..\resources\RegMapClasses.xml" "$(ProjectDir)\examples\LabVIEW\Resources\RegMapClasses.xml"
+copy /Y "$(ProjectDir)..\resources\StreamDataLogger.dll" "$(ProjectDir)\examples\LabVIEW\Resources\StreamDataLogger.dll"
+copy /Y "$(ProjectDir)..\resources\StreamDataLogger.xml" "$(ProjectDir)\examples\LabVIEW\Resources\StreamDataLogger.xml"
+copy /Y "$(ProjectDir)..\resources\FX3_Firmware.img" "$(ProjectDir)\examples\LabVIEW\Resources\FX3_Firmware.img"
+copy /Y "$(ProjectDir)..\resources\boot_fw.img" "$(ProjectDir)\examples\LabVIEW\Resources\boot_fw.img"
+copy /Y "$(ProjectDir)..\resources\USBFlashProg.img" "$(ProjectDir)\examples\LabVIEW\Resources\USBFlashProg.img"
+
+copy /Y "$(TargetDir)\FX3ApiWrapper.dll" "$(ProjectDir)\examples\Matlab\FX3ApiWrapper.dll"
+copy /Y "$(TargetDir)\FX3ApiWrapper.xml" "$(ProjectDir)\examples\Matlab\FX3ApiWrapper.xml"
+copy /Y "$(ProjectDir)..\resources\adisApi.dll" "$(ProjectDir)\examples\Matlab\adisApi.dll"
+copy /Y "$(ProjectDir)..\resources\adisApi.xml" "$(ProjectDir)\examples\Matlab\adisApi.xml"
+copy /Y "$(ProjectDir)..\resources\adisInterface.dll" "$(ProjectDir)\examples\Matlab\adisInterface.dll"
+copy /Y "$(ProjectDir)..\resources\adisInterface.xml" "$(ProjectDir)\examples\Matlab\adisInterface.xml"
+copy /Y "$(ProjectDir)..\resources\CyUSB.dll" "$(ProjectDir)\examples\Matlab\CyUSB.dll"
+copy /Y "$(ProjectDir)..\resources\FX3Api.dll" "$(ProjectDir)\examples\Matlab\FX3Api.dll"
+copy /Y "$(ProjectDir)..\resources\FX3Api.xml" "$(ProjectDir)\examples\Matlab\FX3Api.xml"
+copy /Y "$(ProjectDir)..\resources\FX3USB.dll" "$(ProjectDir)\examples\Matlab\FX3USB.dll"
+copy /Y "$(ProjectDir)..\resources\FX3USB.xml" "$(ProjectDir)\examples\Matlab\FX3USB.xml"
+copy /Y "$(ProjectDir)..\resources\RegMapClasses.dll" "$(ProjectDir)\examples\Matlab\RegMapClasses.dll"
+copy /Y "$(ProjectDir)..\resources\RegMapClasses.xml" "$(ProjectDir)\examples\Matlab\RegMapClasses.xml"
+copy /Y "$(ProjectDir)..\resources\StreamDataLogger.dll" "$(ProjectDir)\examples\Matlab\StreamDataLogger.dll"
+copy /Y "$(ProjectDir)..\resources\StreamDataLogger.xml" "$(ProjectDir)\examples\Matlab\StreamDataLogger.xml"
+copy /Y "$(ProjectDir)..\resources\FX3_Firmware.img" "$(ProjectDir)\examples\Matlab\FX3_Firmware.img"
+copy /Y "$(ProjectDir)..\resources\boot_fw.img" "$(ProjectDir)\examples\Matlab\boot_fw.img"
+copy /Y "$(ProjectDir)..\resources\USBFlashProg.img" "$(ProjectDir)\examples\Matlab\USBFlashProg.img"
+
+copy /Y "$(TargetDir)\FX3ApiWrapper.dll" "$(ProjectDir)\examples\Python\FX3ApiWrapper.dll"
+copy /Y "$(TargetDir)\FX3ApiWrapper.xml" "$(ProjectDir)\examples\Python\FX3ApiWrapper.xml"
+copy /Y "$(ProjectDir)..\resources\adisApi.dll" "$(ProjectDir)\examples\Python\adisApi.dll"
+copy /Y "$(ProjectDir)..\resources\adisApi.xml" "$(ProjectDir)\examples\Python\adisApi.xml"
+copy /Y "$(ProjectDir)..\resources\adisInterface.dll" "$(ProjectDir)\examples\Python\adisInterface.dll"
+copy /Y "$(ProjectDir)..\resources\adisInterface.xml" "$(ProjectDir)\examples\Python\adisInterface.xml"
+copy /Y "$(ProjectDir)..\resources\CyUSB.dll" "$(ProjectDir)\examples\Python\CyUSB.dll"
+copy /Y "$(ProjectDir)..\resources\FX3Api.dll" "$(ProjectDir)\examples\Python\FX3Api.dll"
+copy /Y "$(ProjectDir)..\resources\FX3Api.xml" "$(ProjectDir)\examples\Python\FX3Api.xml"
+copy /Y "$(ProjectDir)..\resources\FX3USB.dll" "$(ProjectDir)\examples\Python\FX3USB.dll"
+copy /Y "$(ProjectDir)..\resources\FX3USB.xml" "$(ProjectDir)\examples\Python\FX3USB.xml"
+copy /Y "$(ProjectDir)..\resources\RegMapClasses.dll" "$(ProjectDir)\examples\Python\RegMapClasses.dll"
+copy /Y "$(ProjectDir)..\resources\RegMapClasses.xml" "$(ProjectDir)\examples\Python\RegMapClasses.xml"
+copy /Y "$(ProjectDir)..\resources\StreamDataLogger.dll" "$(ProjectDir)\examples\Python\StreamDataLogger.dll"
+copy /Y "$(ProjectDir)..\resources\StreamDataLogger.xml" "$(ProjectDir)\examples\Python\StreamDataLogger.xml"
+copy /Y "$(ProjectDir)..\resources\FX3_Firmware.img" "$(ProjectDir)\examples\Python\FX3_Firmware.img"
+copy /Y "$(ProjectDir)..\resources\boot_fw.img" "$(ProjectDir)\examples\Python\boot_fw.img"
+copy /Y "$(ProjectDir)..\resources\USBFlashProg.img" "$(ProjectDir)\examples\Python\USBFlashProg.img"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
