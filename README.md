@@ -22,7 +22,7 @@ This firmware was designed around the Cypress EZ-USB FX3 SuperSpeed USB Controll
 
 The EVAL-ADIS-FX3 includes many additional firmware and hardware features that make testing, characterizing, and developing software for iSensor products easy. Firmware and API support for this board are included in release v2.5 onward. 
 
-![iSensor FX3 Evaluation Board](https://raw.githubusercontent.com/analogdevicesinc/iSensor-FX3-Firmware/master/hardware/pictures/img6.jpg)
+![iSensor FX3 Evaluation Board](hardware/pictures/img6.jpg)
 
 The EVAL-ADIS-FX3 features include:
 
@@ -45,7 +45,7 @@ The EVAL-ADIS-FX3 features include:
 - Windows 7, 8, and 10 compatibility
 - 1.5“ x 1.75” PCB footprint
 
-![iSensor FX3 Evaluation Board with IMU ](https://raw.githubusercontent.com/analogdevicesinc/iSensor-FX3-Firmware/master/hardware/pictures/img7.jpg)
+![iSensor FX3 Evaluation Board with IMU ](hardware/pictures/img7.jpg)
 
 Design files for the breakout board is available in the [hardware](https://github.com/analogdevicesinc/iSensor-FX3-API/tree/master/hardware) folder of the API repository.
 
@@ -53,7 +53,7 @@ Design files for the breakout board is available in the [hardware](https://githu
 
 A breakout board designed for interfacing iSensor devices with the Cypress SuperSpeed Explorer Kit (CYUSB3KIT-003) was introduced as a temporary solution while a more feature-rich offering was developed.  Both boards will continue to be supported in future firmware revisions. 
 
-![CYUSB3KIT-003 and Breakout Board](https://raw.githubusercontent.com/analogdevicesinc/iSensor-FX3-Firmware/master/hardware/pictures/img2.jpg)
+![CYUSB3KIT-003 and Breakout Board](hardware/pictures/img2.jpg)
 
 Design files for both breakout boards are available in the [hardware](https://github.com/analogdevicesinc/iSensor-FX3-API/tree/master/hardware) folder of the API repository.
 
@@ -61,7 +61,7 @@ Design files for both breakout boards are available in the [hardware](https://gi
 
 The Explorer Kit requires **three** jumpers to be installed to operate correctly as shown in the image below. **Jumpers J2, J3, and J5 must be installed** when using the SuperSpeed Explorer Kit. **Jumper J4 must be open** to allow booting from the onboard EEPROM. 
 
- ![FX3 Jumper Locations](https://raw.githubusercontent.com/analogdevicesinc/iSensor-FX3-Firmware/master/hardware/pictures/JumperLocations.jpg)
+ ![FX3 Jumper Locations](hardware/pictures/JumperLocations.jpg)
 
 ## Getting Started
 
