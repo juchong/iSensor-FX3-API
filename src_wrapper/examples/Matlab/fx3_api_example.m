@@ -1,7 +1,19 @@
+%Copyright (c) 2018-2020 Analog Devices, Inc. All Rights Reserved.
+%This software is proprietary to Analog Devices, Inc. and its licensors.
+%
+%Authors: Alex Nolan, Juan Chong
+
+clear
+
+%Watch for user inputs to exit code execution
+H = uicontrol('Style', 'PushButton', ...
+                    'String', 'Break', ...
+                    'Callback', 'delete(gcbf)');
+
 %Get paths
-wrapperPath = fullfile(pwd, '..\..\Resources\FX3ApiWrapper.dll');
-regMapPath = fullfile(pwd, '..\ADIS1650x_Regmap.csv');
-resourcePath = fullfile(pwd, '..\..\Resources\');
+wrapperPath = fullfile(strcat(pwd, '../../../../resources/FX3ApiWrapper.dll'));
+regMapPath = fullfile(strcat(pwd, '../../../regmaps/ADIS1650x_Regmap.csv'));
+resourcePath = fullfile(strcat(pwd, '../../../../resources/'));
 
 %Load wrapper DLL
 NET.addAssembly(wrapperPath);
@@ -22,10 +34,12 @@ Dut.SetDrActive(true);
 
 %Create reglist
 regs = NET.createArray('System.String',3);
-regs(1) = 'XACCL_UPR';
-regs(2) = 'YACCL_UPR';
-regs(3) = 'ZACCL_UPR';
+regs(1) = 'X_ACCL_OUT';
+regs(2) = 'Y_ACCL_OUT';
+regs(3) = 'Z_ACCL_OUT';
 
+%Enable pausing
+pause on
 %sample freq
 Fs = 2000;
 %sample period
@@ -50,7 +64,7 @@ z_fft = [];
 %index in raw data
 i = 1;
 
-while(true)
+while(ishandle(H))
     rawData = int32(Dut.ReadSigned(regs, 1, L));
     i = 1;
     for n = 1:3:length(rawData)
@@ -88,4 +102,11 @@ while(true)
     
     xlabel('Frequency (in hertz)');
     title('ADIS1650x XL FFT');
+    pause(0.1)
 end
+
+%Turn off user LED
+Dut.UserLEDOff;
+
+%Clean up FX3
+Dut.Disconnect;
