@@ -574,16 +574,16 @@ static CyU3PReturnStatus_t AdiTransferStreamWork()
 	CyU3PReturnStatus_t status = CY_U3P_SUCCESS;
 
 	/* Track index within the USBBuffer */
-	uint16_t MOSIDataCount;
+	uint32_t MOSIDataCount;
 
 	/* Track current capture count */
-	uint16_t captureCount;
-
-	/* Number of bytes per SPI transfer */
-	uint32_t bytesPerSpiTransfer;
+	uint32_t captureCount;
 
 	/* array to hold the MOSI data */
 	uint8_t* MOSIData;
+
+	/* Flag to track first run */
+	CyBool_t firstTransfer = CyTrue;
 
 	/* If the stream channel buffer has not been set, get a new buffer */
 	if(bufPtr == 0)
@@ -599,9 +599,6 @@ static CyU3PReturnStatus_t AdiTransferStreamWork()
 		CyU3PDebugPrint (4, "Got the first transfer stream DMA buffer, address = 0x%x\r\n", bufPtr);
 #endif
 	}
-
-	/* Check the number of bytes per SPI transfer */
-	bytesPerSpiTransfer = 4;
 
 	/* Wait for DR if enabled */
 	if (FX3State.DrActive)
@@ -623,10 +620,13 @@ static CyU3PReturnStatus_t AdiTransferStreamWork()
 		MOSIData = USBBuffer;
 		/* Increment by 14 so it now points at first MOSI data value */
 		MOSIData += 14;
-		for(MOSIDataCount = 0; MOSIDataCount < StreamThreadState.BytesPerBuffer; MOSIDataCount += bytesPerSpiTransfer)
+		for(MOSIDataCount = 0; MOSIDataCount < StreamThreadState.BytesPerBuffer; MOSIDataCount += 4)
 		{
-			/* Wait for the complex GPIO timer to reach the stall time */
-			while(!(GPIO->lpp_gpio_pin[ADI_TIMER_PIN_INDEX].status & CY_U3P_LPP_GPIO_INTR));
+			/* Wait for the complex GPIO timer to reach the stall time (except on first word) */
+			if(!firstTransfer)
+				while(!(GPIO->lpp_gpio_pin[ADI_TIMER_PIN_INDEX].status & CY_U3P_LPP_GPIO_INTR));
+			else
+				firstTransfer = CyFalse;
 
 			/* Transfer data */
 			AdiSpiTransferWord(MOSIData, bufPtr);
@@ -638,9 +638,9 @@ static CyU3PReturnStatus_t AdiTransferStreamWork()
 			GPIO->lpp_gpio_pin[ADI_TIMER_PIN_INDEX].status |= CY_U3P_LPP_GPIO_INTR;
 
 			/* Update counters and buffer pointers */
-			bufPtr += bytesPerSpiTransfer;
-			byteCounter += bytesPerSpiTransfer;
-			MOSIData += bytesPerSpiTransfer;
+			bufPtr += 4;
+			byteCounter += 4;
+			MOSIData += 4;
 
 			/* Check if a transmission is needed */
 			if (byteCounter >= (StreamThreadState.BytesPerUsbPacket - 1))
