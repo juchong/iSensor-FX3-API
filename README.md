@@ -16,52 +16,13 @@ The FX3 Firmware was designed with compatibility and flexibility in mind. The fi
 
 Static-generated documentation for the FX3 API .NET library and firmware can be found here: [https://analogdevicesinc.github.io/iSensor-FX3-API/](https://analogdevicesinc.github.io/iSensor-FX3-API/)
 
-## iSensor FX3 Evaluation Board
+## Windows Drivers
 
-This firmware was designed around the Cypress EZ-USB FX3 SuperSpeed USB Controller (CYUSB3014 and CYUSB2014) family of USB interface ICs offered by Cypress. 
+As of v1.0.6, custom, signed, Analog Devices drivers must be used to communicate with the iSensor FX3 Firmware. The driver installation package can be found in the [drivers](drivers) folder in this repository or downloaded directly from [here](drivers/FX3DriverSetup.exe). 
 
-The EVAL-ADIS-FX3 includes many additional firmware and hardware features that make testing, characterizing, and developing software for iSensor products easy. Firmware and API support for this board are included in release v2.5 onward. 
+## iSensor FX3 Hardware
 
-![iSensor FX3 Evaluation Board](hardware/pictures/img6.jpg)
-
-The EVAL-ADIS-FX3 features include:
-
-- A dedicated, onboard 3.3V, 2A linear regulator designed for high-transient applications
-- A USB-C connector (USB 2.0 compatible only)
-- An onboard, field-upgradable EEPROM with USB bootloader fallback
-- A software-selectable OFF / 3.3V / 5V IMU supply output with overcurrent and short protection
-- A JST-XH-2 external supply connector
-- Selectable USB and external supply selection
-- Onboard status LEDs for each IMU GPIO pin
-- An iSensor standard, 16-pin, 2mm connector for compatibility with existing iSensor breakout boards and adapters
-- An additional 10-pin, 2mm connector for feature expansion. As of writing, the firmware and API include support for:
-- FX3 UART debugging
-- Four additional GPIO pins for external test equipment triggering and sensing (separate from the IMU GPIOs)
-- Separate 3.3V and 5V supplies from the DUT supply meant to power external level shifters, drivers, interface ICs, etc.
-- An extra, “bit-banged” SPI port to allow for “non-standard” SPI configurations and communication with external hardware (ADCs, DACs, protocol interface ICs, etc.)
-- An I2C port meant for interfacing with I2C-compatible inertial sensors
-- Concurrent, multi-board data capture capability. Multiple EVAL-ADIS-FX3 boards can be connected to the same PC and can concurrently capture data independently of each other
-- Very low CPU usage while capturing data, even on older Windows machines
-- Windows 7, 8, and 10 compatibility
-- 1.5“ x 1.75” PCB footprint
-
-![iSensor FX3 Evaluation Board with IMU ](hardware/pictures/img7.jpg)
-
-Design files for the breakout board is available in the [hardware](https://github.com/analogdevicesinc/iSensor-FX3-API/tree/master/hardware) folder of the API repository.
-
-## SuperSpeed Explorer Kit Breakout Board
-
-A breakout board designed for interfacing iSensor devices with the Cypress SuperSpeed Explorer Kit (CYUSB3KIT-003) was introduced as a temporary solution while a more feature-rich offering was developed.  Both boards will continue to be supported in future firmware revisions. 
-
-![CYUSB3KIT-003 and Breakout Board](hardware/pictures/img2.jpg)
-
-Design files for both breakout boards are available in the [hardware](https://github.com/analogdevicesinc/iSensor-FX3-API/tree/master/hardware) folder of the API repository.
-
-## SuperSpeed Explorer Kit Jumper Configuration
-
-The Explorer Kit requires **three** jumpers to be installed to operate correctly as shown in the image below. **Jumpers J2, J3, and J5 must be installed** when using the SuperSpeed Explorer Kit. **Jumper J4 must be open** to allow booting from the onboard EEPROM. 
-
- ![FX3 Jumper Locations](hardware/pictures/JumperLocations.jpg)
+Design files, schematics, and other reference documents for the EVAL-ADIS-FX3 and the Cypress FX3 Explorer Breakout Board can be found [here](hardware).
 
 ## Getting Started
 
@@ -80,10 +41,6 @@ The FX3 API translates high-level user commands into the necessary low-level Cyp
 #### Example Application
 
 An example application was developed to provide users with a simple starting point. The application repository can be found here.
-
-## Drivers
-
-As of v1.0.6, custom, signed, Analog Devices drivers must be used to communicate with the iSensor FX3 Firmware. The driver installation package can be found in the [drivers](https://github.com/analogdevicesinc/iSensor-FX3-API/tree/master/drivers) folder in this repository or downloaded directly from [here](https://github.com/analogdevicesinc/iSensor-FX3-API/raw/master/drivers/FX3DriverSetup.exe). 
 
 ## iSensor-Specific Library Information
 
