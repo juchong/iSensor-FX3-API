@@ -1,5 +1,5 @@
-This simple Matlab script connects to an FX3 and reads the primary XL output registers from an ADIS1650x DUT. Each set of reads are data ready synchronized, and the resulting data is FFT'd and plotted.
+This example script connects to an FX3 board, blinks the user-addressable LED, and continuously reads accelerometer output registers from an ADIS1650x IMU. The FX3 board is configured to trigger a read when a data ready signal is received. The data read from the IMU is passed to MATLAB where it is then FFT'd and plotted. 
 
-Reference for .NET <-> Matlab data conversions can be found here: https://www.mathworks.com/help/matlab/matlab_external/passing-net-data-in-matlab.html
+Reference documentation for .NET <-> Matlab data conversions can be found on Mathwork's website [link](https://www.mathworks.com/help/matlab/matlab_external/passing-net-data-in-matlab.html).
 
-This example uses relative paths to locate resources based on the FX3 API repository structure. To function "As-Is" the FX3 API library must be built and placed in the "Resources" folder of the repo.
+**NOTE:** This example uses relative paths to locate resources based on the FX3 API repository structure. To use this example as a stand-alone application outside of this repository, the paths to the necessary .dll files (contained within the `resources` folder in the root of this repository) should be updated to reflect the new folder structure. 

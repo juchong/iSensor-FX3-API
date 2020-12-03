@@ -14,15 +14,15 @@ This example was tested and developed using LabVIEW 2015 running on Windows 10 u
 
 ## Matlab
 
-The example script connects to an FX3 board, blinks the user-addressable LED, and continuously reads accelerometer output registers from an ADIS1650x IMU ([link](examples/Matlab))
+The example script connects to an FX3 board, blinks the user-addressable LED, and continuously reads accelerometer output registers from an ADIS1650x IMU ([link](examples/Matlab)).
 
 This example was tested and developed using Matlab R2017B (64-bit) running on Windows 10 using an EVAL-ADIS-FX3.
 
 ## Python
 
-The example script connects to an FX3 board, blinks the user-addressable LED, and continuously reads the primary output registers from an ADIS1650x IMU ([link](examples/Python))
+The example script connects to an FX3 board, blinks the user-addressable LED, and continuously reads the primary output registers from an ADIS1650x IMU ([link](examples/Python)).
 
-This example was tested using Python 3.7 (32-bit) running on Windows 10 using an EVAL-ADIS-FX3
+This example was tested using Python 3.7 (32-bit) running on Windows 10 using an EVAL-ADIS-FX3.
 
 ## Debugging
 
