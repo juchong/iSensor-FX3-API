@@ -874,7 +874,7 @@ Partial Class FX3Connection
     ''' <summary>
     ''' This function configures the selected pin to drive a pulse width modulated output.
     ''' </summary>
-    ''' <param name="Frequency">The desired PWM frequency, in Hz. Valid values are in the range of 0.05Hz (0.05) - 10MHz (10000000.0)</param>
+    ''' <param name="Frequency">The desired PWM frequency, in Hz. Valid values are in the range of 0.05Hz (0.05) - 50MHz (20000000.0)</param>
     ''' <param name="DutyCycle">The PWM duty cycle. Valid values are in the range 0.0 - 1.0. To achieve a "clock" signal set the duty cycle to 0.5</param>
     ''' <param name="Pin">The pin to configure as a PWM signal.</param>
     Public Sub StartPWM(Frequency As Double, DutyCycle As Double, Pin As IPinObject)
@@ -896,7 +896,7 @@ Partial Class FX3Connection
         Next
 
         'Validate frequency
-        If Frequency < 0.05 Or Frequency > 10000000 Then
+        If Frequency < 0.05 Or Frequency > 50000000 Then
             Throw New FX3ConfigurationException("ERROR: Invalid PWM frequency: " + Frequency.ToString() + "Hz")
         End If
 
