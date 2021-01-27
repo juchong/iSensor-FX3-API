@@ -1,27 +1,29 @@
 # Overview
 
-The FX3ApiWrapper library presents a simplified interface to the FX3 API and corresponding DUT interfacing libraries
+The FX3ApiWrapper library presents the target application with a simplified subset of the FX3 API and interfacing libraries.
 
-## Use Case
+This library is intended to make using the FX3 API and adisInterface easier in non-dot-NET languages capable of consuming(wrapping) .NET DLLs. 
 
-This library is intended to allow easy use of the FX3 API and adisInterface in non .NET languages which can consume .NET DLL's. 
+The FX3ApiWrapper library translates all the interfacing functions such that they only use numeric or string primitives instead of .NET class objects. This greatly simplifies the interface for the caller (LabVIEW, Python, etc.) and boosts wrapper compatibility.
 
-All DUT interfacing functions work on numeric or string primitives, instead of .NET class objects. This significantly simplifies the interface for the caller (Labview, python, etc)
+## LabVIEW
 
-## Labview
+The example project illustrates setting up and configuring an ADIS1650x IMU using a command message-based structure and includes examples for reading, writing, and streaming registers ([link](examples/LabVIEW)).
 
-Example VI utilizing the FX3ApiWrapper coming soon
+This example was tested and developed using LabVIEW 2015 running on Windows 10 using an EVAL-ADIS-FX3.
 
 ## Matlab
 
-Example script (Matlab\fx3_api_example.m) connects to an FX3 board, blinks user LED, and reads output registers from an ADIS1650x DUT
-* Tested using Matlab R2017B (64-bit) running on Windows 10
+The example script connects to an FX3 board, blinks the user-addressable LED, and continuously reads accelerometer output registers from an ADIS1650x IMU ([link](examples/Matlab)).
+
+This example was tested and developed using Matlab R2017B (64-bit) running on Windows 10 using an EVAL-ADIS-FX3.
 
 ## Python
 
-Example script (Python\fx3_api_example.py) connects to an FX3 board, blinks user LED, and reads output registers from an ADIS1650x DUT
-* Tested using Python 3.7 (32-bit) running on Windows 10
+The example script connects to an FX3 board, blinks the user-addressable LED, and continuously reads the primary output registers from an ADIS1650x IMU ([link](examples/Python)).
+
+This example was tested using Python 3.7 (32-bit) running on Windows 10 using an EVAL-ADIS-FX3.
 
 ## Debugging
 
-The FX3 libraries can be debugged while running under MatLab/Python using the Visual Studio "Attach to Process" functionality. This allows you to step through the .NET source code as it is invoked by the calling language.
+The underlying FX3 libraries can be debugged even while running in other platforms (Matlab, LabVIEW, Python, etc.) using the Visual Studio "Attach to Process" functionality. This feature allows for stepping through the .NET source code as it is invoked by the base (calling) language.
