@@ -762,9 +762,8 @@ namespace FX3ApiWrapper
             }
             else if (FX3.BusyFX3s.Count() > 0)
             {
-                FX3.ResetAllFX3s();
-                FX3.WaitForBoard(5);
-                ConnectToBoard();
+                //allow user to piggyback on already connected FX3
+                FX3.Connect(FX3.BusyFX3s[0]);
             }
             else
             {
