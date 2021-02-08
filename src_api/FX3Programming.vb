@@ -169,6 +169,9 @@ Partial Class FX3Connection
         'Make sure that the board SPI parameters match current setting
         WriteBoardSpiParameters()
 
+        'Apply a pull up to reset
+        SetPinResistorSetting(ResetPin, FX3PinResistorSetting.PullUp)
+
         'make sure board i2c parameters match API
         SetI2CBitRate(m_i2cbitrate)
         SetI2CRetryCount(m_i2cRetryCount)
