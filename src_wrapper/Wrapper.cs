@@ -133,6 +133,16 @@ namespace FX3ApiWrapper
         }
 
         /// <summary>
+        /// Set the word order for a 32-bit register which is comprised
+        /// of multiple 16-bit registers
+        /// </summary>
+        /// <param name="LowerFirst">If the lower 16-bits of the reg address is at n (true), or n+1 (false)</param>
+        public void SetRegWordOrder(bool LowerFirst)
+        {
+            Dut.IsLowerFirst = LowerFirst;
+        }
+
+        /// <summary>
         /// Blink user LED
         /// </summary>
         /// <param name="freq">Blink freq, in Hz</param>
