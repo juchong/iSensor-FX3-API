@@ -1,0 +1,4 @@
+<map id="AdiGetSpiConfig" name="AdiGetSpiConfig">
+<area shape="rect" id="node1" title="This function parses the SPI control registers into an easier to work with config struct." alt="" coords="5,5,123,32"/>
+<area shape="rect" id="node2" href="$_spi_functions_8c.html#a076840fb075504de28bab8f97ec172d3" title="Waits for the SPI controller busy bit to be not set." alt="" coords="171,5,327,32"/>
+</map>

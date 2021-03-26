@@ -1,0 +1,7 @@
+<map id="AdiSpiResetFifo" name="AdiSpiResetFifo">
+<area shape="rect" id="node1" title="This function resets the SPI FIFO and disables the SPI block after completion." alt="" coords="603,31,717,57"/>
+<area shape="rect" id="node2" href="$_stream_functions_8h.html#a486f4434dc95c29845e6ee27fe259a9e" title="Starts a burst stream for IMU products." alt="" coords="401,5,543,32"/>
+<area shape="rect" id="node5" href="$_stream_functions_8h.html#a92f3cda6e0c22b4a59caa5a0f1c1bdd7" title="Starts a real time stream for ADcmXLx021 DUTs." alt="" coords="389,56,555,83"/>
+<area shape="rect" id="node3" href="$_app_thread_8h.html#a35c4109a6db8157f4223c93d326a0265" title="This is the entry point for the primary iSensors firmware application thread." alt="" coords="207,31,341,57"/>
+<area shape="rect" id="node4" href="$main_8c.html#a979d0f023cb68d36fff95c5a5f5f2bc8" title="This function is called by the RTOS kernel after booting and creates all the user threads." alt="" coords="5,31,159,57"/>
+</map>

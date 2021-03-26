@@ -1,0 +1,5 @@
+<map id="AdiBurstStreamWork" name="AdiBurstStreamWork">
+<area shape="rect" id="node1" title="This is the worker function for the burst stream." alt="" coords="408,5,553,32"/>
+<area shape="rect" id="node2" href="$_stream_thread_8h.html#a7705f9deff41eda1e466279dd336b5ef" title="The entry point function for the StreamThread. Handles all streaming data captures." alt="" coords="207,5,360,32"/>
+<area shape="rect" id="node3" href="$main_8c.html#a979d0f023cb68d36fff95c5a5f5f2bc8" title="This function is called by the RTOS kernel after booting and creates all the user threads." alt="" coords="5,5,159,32"/>
+</map>

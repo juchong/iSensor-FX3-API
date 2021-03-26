@@ -1,0 +1,4 @@
+<map id="AdiStopAnyDataStream" name="AdiStopAnyDataStream">
+<area shape="rect" id="node1" title="This function sets a flag to notify the streaming thread that the user requested to cancel streaming." alt="" coords="5,5,165,32"/>
+<area shape="rect" id="node2" href="$_helper_functions_8c.html#aa2fad3b6760da6ae249c937cc50e9a20" title="Sends status back to PC over control endpoint or manual bulk in endpoint." alt="" coords="213,5,323,32"/>
+</map>

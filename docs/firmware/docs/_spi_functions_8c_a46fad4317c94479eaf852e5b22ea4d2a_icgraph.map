@@ -1,0 +1,8 @@
+<map id="AdiSetSpiWordLength" name="AdiSetSpiWordLength">
+<area shape="rect" id="node1" title="Sets the SPI controller word length (4 &#45; 32 bits)" alt="" coords="603,56,753,83"/>
+<area shape="rect" id="node2" href="$_stream_functions_8h.html#a5735bbe4e20ff7d3aa8e12783da536c7" title="Cleans up resources allocated for a IMU burst stream." alt="" coords="391,5,553,32"/>
+<area shape="rect" id="node5" href="$_stream_functions_8h.html#a486f4434dc95c29845e6ee27fe259a9e" title="Starts a burst stream for IMU products." alt="" coords="401,56,543,83"/>
+<area shape="rect" id="node6" href="$_stream_functions_8h.html#a92f3cda6e0c22b4a59caa5a0f1c1bdd7" title="Starts a real time stream for ADcmXLx021 DUTs." alt="" coords="389,107,555,133"/>
+<area shape="rect" id="node3" href="$_app_thread_8h.html#a35c4109a6db8157f4223c93d326a0265" title="This is the entry point for the primary iSensors firmware application thread." alt="" coords="207,56,341,83"/>
+<area shape="rect" id="node4" href="$main_8c.html#a979d0f023cb68d36fff95c5a5f5f2bc8" title="This function is called by the RTOS kernel after booting and creates all the user threads." alt="" coords="5,56,159,83"/>
+</map>

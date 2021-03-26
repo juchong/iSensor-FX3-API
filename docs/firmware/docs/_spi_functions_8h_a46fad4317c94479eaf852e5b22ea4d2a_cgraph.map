@@ -1,0 +1,4 @@
+<map id="AdiSetSpiWordLength" name="AdiSetSpiWordLength">
+<area shape="rect" id="node1" title="Sets the SPI controller word length (4 &#45; 32 bits)" alt="" coords="5,5,156,32"/>
+<area shape="rect" id="node2" href="$_spi_functions_8c.html#a076840fb075504de28bab8f97ec172d3" title="Waits for the SPI controller busy bit to be not set." alt="" coords="204,5,360,32"/>
+</map>

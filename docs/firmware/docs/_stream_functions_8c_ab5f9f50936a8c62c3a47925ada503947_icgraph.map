@@ -1,0 +1,6 @@
+<map id="AdiGenericStreamFinished" name="AdiGenericStreamFinished">
+<area shape="rect" id="node1" title="This function cleans up after a generic stream and notifies the host that the cancel operation was su..." alt="" coords="616,5,793,32"/>
+<area shape="rect" id="node2" href="$_app_thread_8h.html#a35c4109a6db8157f4223c93d326a0265" title="This is the entry point for the primary iSensors firmware application thread." alt="" coords="207,5,341,32"/>
+<area shape="rect" id="node4" href="$_stream_functions_8h.html#a21bc8ca5ba28fea850189fd9cde3b210" title="Cleans up a protocol agnostic transfer stream." alt="" coords="389,31,568,57"/>
+<area shape="rect" id="node3" href="$main_8c.html#a979d0f023cb68d36fff95c5a5f5f2bc8" title="This function is called by the RTOS kernel after booting and creates all the user threads." alt="" coords="5,5,159,32"/>
+</map>

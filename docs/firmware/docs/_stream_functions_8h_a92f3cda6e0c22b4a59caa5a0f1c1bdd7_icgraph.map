@@ -1,0 +1,5 @@
+<map id="AdiRealTimeStreamStart" name="AdiRealTimeStreamStart">
+<area shape="rect" id="node1" title="Starts a real time stream for ADcmXLx021 DUTs." alt="" coords="389,5,555,32"/>
+<area shape="rect" id="node2" href="$_app_thread_8h.html#a35c4109a6db8157f4223c93d326a0265" title="This is the entry point for the primary iSensors firmware application thread." alt="" coords="207,5,341,32"/>
+<area shape="rect" id="node3" href="$main_8c.html#a979d0f023cb68d36fff95c5a5f5f2bc8" title="This function is called by the RTOS kernel after booting and creates all the user threads." alt="" coords="5,5,159,32"/>
+</map>

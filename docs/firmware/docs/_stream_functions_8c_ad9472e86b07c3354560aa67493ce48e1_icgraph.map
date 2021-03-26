@@ -1,0 +1,7 @@
+<map id="AdiConfigStreamStallTimer" name="AdiConfigStreamStallTimer">
+<area shape="rect" id="node1" title="Configures 10MHz timer to control stall time for generic or transfer streams." alt="" coords="595,31,772,57"/>
+<area shape="rect" id="node2" href="$_stream_functions_8h.html#ae20cb57e4c12bf480ac0c17ba9292a31" title="Starts a register read/write stream, with options to trigger on a data ready." alt="" coords="390,5,546,32"/>
+<area shape="rect" id="node5" href="$_stream_functions_8h.html#ad691192687ea7f683ced5ecdc7d96386" title="Starts a protocol agnostic SPI transfer stream." alt="" coords="389,56,547,83"/>
+<area shape="rect" id="node3" href="$_app_thread_8h.html#a35c4109a6db8157f4223c93d326a0265" title="This is the entry point for the primary iSensors firmware application thread." alt="" coords="207,31,341,57"/>
+<area shape="rect" id="node4" href="$main_8c.html#a979d0f023cb68d36fff95c5a5f5f2bc8" title="This function is called by the RTOS kernel after booting and creates all the user threads." alt="" coords="5,31,159,57"/>
+</map>

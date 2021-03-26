@@ -1,0 +1,5 @@
+<map id="AdiGetFX3BoardType" name="AdiGetFX3BoardType">
+<area shape="rect" id="node1" title="This function determines the type of the connected FX3 board." alt="" coords="5,5,152,32"/>
+<area shape="rect" id="node2" href="$_pin_functions_8c.html#a172c35546501defa48c86d06bcd11d28" title="Determine state of an input pin (high, low, high Z)" alt="" coords="200,5,312,32"/>
+<area shape="rect" id="node3" href="$_helper_functions_8c.html#a4191f362f953cee5a7ad6170349760c0" title="This function blocks thread execution for a specified number of microseconds." alt="" coords="360,5,536,32"/>
+</map>

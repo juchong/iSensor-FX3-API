@@ -1,0 +1,10 @@
+<map id="AdiConfigurePinInterrupt" name="AdiConfigurePinInterrupt">
+<area shape="rect" id="node1" title="configures the selected pin as an interrupt with edge triggering based on polarity" alt="" coords="769,81,931,108"/>
+<area shape="rect" id="node2" href="$_stream_functions_8h.html#a45ae5cdd0919f6acf4fbfe230bbc7dd8" title="Configures the data ready pin as an input with edge interrupt triggering enabled." alt="" coords="595,81,721,108"/>
+<area shape="rect" id="node3" href="$_stream_functions_8h.html#a486f4434dc95c29845e6ee27fe259a9e" title="Starts a burst stream for IMU products." alt="" coords="397,5,539,32"/>
+<area shape="rect" id="node6" href="$_stream_functions_8h.html#ae20cb57e4c12bf480ac0c17ba9292a31" title="Starts a register read/write stream, with options to trigger on a data ready." alt="" coords="390,56,546,83"/>
+<area shape="rect" id="node7" href="$_stream_functions_8h.html#a674b68725b4090cf8f1560d0d19bfc0b" title="Starts an I2C read stream." alt="" coords="403,107,533,133"/>
+<area shape="rect" id="node8" href="$_stream_functions_8h.html#ad691192687ea7f683ced5ecdc7d96386" title="Starts a protocol agnostic SPI transfer stream." alt="" coords="389,157,547,184"/>
+<area shape="rect" id="node4" href="$_app_thread_8h.html#a35c4109a6db8157f4223c93d326a0265" title="This is the entry point for the primary iSensors firmware application thread." alt="" coords="207,81,341,108"/>
+<area shape="rect" id="node5" href="$main_8c.html#a979d0f023cb68d36fff95c5a5f5f2bc8" title="This function is called by the RTOS kernel after booting and creates all the user threads." alt="" coords="5,81,159,108"/>
+</map>

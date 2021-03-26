@@ -1,0 +1,4 @@
+<map id="FindFirmwareVersion" name="FindFirmwareVersion">
+<area shape="rect" id="node1" title="Parses the firmware version number from FirmwareID to a user provided buffer." alt="" coords="5,5,149,32"/>
+<area shape="rect" id="node2" href="$main_8c.html#a1e4f00a6649f71b6f7d737b7906b7ab3" title=" " alt="" coords="197,5,284,32"/>
+</map>

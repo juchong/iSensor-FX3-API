@@ -1,0 +1,10 @@
+<map id="AdiGetSpiConfig" name="AdiGetSpiConfig">
+<area shape="rect" id="node1" title="This function parses the SPI control registers into an easier to work with config struct." alt="" coords="792,81,909,108"/>
+<area shape="rect" id="node2" href="$_stream_functions_8h.html#a44b20c4d8d2c75500c589779963ae8ba" title="This function prints all the stream state variables to the terminal if VERBOSE_MODE is defined." alt="" coords="603,81,744,108"/>
+<area shape="rect" id="node3" href="$_stream_functions_8h.html#ae20cb57e4c12bf480ac0c17ba9292a31" title="Starts a register read/write stream, with options to trigger on a data ready." alt="" coords="394,5,550,32"/>
+<area shape="rect" id="node6" href="$_stream_functions_8h.html#a674b68725b4090cf8f1560d0d19bfc0b" title="Starts an I2C read stream." alt="" coords="407,56,537,83"/>
+<area shape="rect" id="node7" href="$_stream_functions_8h.html#a92f3cda6e0c22b4a59caa5a0f1c1bdd7" title="Starts a real time stream for ADcmXLx021 DUTs." alt="" coords="389,107,555,133"/>
+<area shape="rect" id="node8" href="$_stream_functions_8h.html#ad691192687ea7f683ced5ecdc7d96386" title="Starts a protocol agnostic SPI transfer stream." alt="" coords="393,157,551,184"/>
+<area shape="rect" id="node4" href="$_app_thread_8h.html#a35c4109a6db8157f4223c93d326a0265" title="This is the entry point for the primary iSensors firmware application thread." alt="" coords="207,81,341,108"/>
+<area shape="rect" id="node5" href="$main_8c.html#a979d0f023cb68d36fff95c5a5f5f2bc8" title="This function is called by the RTOS kernel after booting and creates all the user threads." alt="" coords="5,81,159,108"/>
+</map>

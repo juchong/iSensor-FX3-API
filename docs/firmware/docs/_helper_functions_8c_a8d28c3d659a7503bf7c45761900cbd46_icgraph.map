@@ -1,0 +1,4 @@
+<map id="WatchDogTimerCb" name="WatchDogTimerCb">
+<area shape="rect" id="node1" title="Timer callback function to clear the watchdog timer. Should not be called directly." alt="" coords="208,5,339,32"/>
+<area shape="rect" id="node2" href="$_helper_functions_8h.html#a324389c2f4332af32ea49f7b0f4741e2" title="Configures the FX3 watchdog timer based on the current board state." alt="" coords="5,5,160,32"/>
+</map>

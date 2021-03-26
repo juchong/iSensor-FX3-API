@@ -1,0 +1,5 @@
+<map id="AdiTransferBytes" name="AdiTransferBytes">
+<area shape="rect" id="node1" title="This function performs a protocol agnostic SPI bi&#45;directional SPI transfer of (1, 2,..." alt="" coords="5,31,127,57"/>
+<area shape="rect" id="node2" href="$_spi_functions_8c.html#a1aafef1027cccda6ac0b87049e4e72af" title="Bi&#45;directional SPI transfer function, in register mode. Optimized for speed." alt="" coords="184,5,321,32"/>
+<area shape="rect" id="node3" href="$_spi_functions_8c.html#a076840fb075504de28bab8f97ec172d3" title="Waits for the SPI controller busy bit to be not set." alt="" coords="175,56,331,83"/>
+</map>

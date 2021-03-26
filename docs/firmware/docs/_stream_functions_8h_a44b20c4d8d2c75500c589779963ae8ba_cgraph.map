@@ -1,0 +1,6 @@
+<map id="AdiPrintStreamState" name="AdiPrintStreamState">
+<area shape="rect" id="node1" title="This function prints all the stream state variables to the terminal if VERBOSE_MODE is defined." alt="" coords="5,31,147,57"/>
+<area shape="rect" id="node2" href="$_spi_functions_8c.html#ada9219b41ae6d89a54e2d37696c64a6b" title="This function parses the SPI control registers into an easier to work with config struct." alt="" coords="197,5,315,32"/>
+<area shape="rect" id="node4" href="$_spi_functions_8c.html#a91b6e4f6710b6e1c9f7eee02eb6613ca" title="Prints a given SPI config over the UART debug port." alt="" coords="195,56,317,83"/>
+<area shape="rect" id="node3" href="$_spi_functions_8c.html#a076840fb075504de28bab8f97ec172d3" title="Waits for the SPI controller busy bit to be not set." alt="" coords="365,5,521,32"/>
+</map>

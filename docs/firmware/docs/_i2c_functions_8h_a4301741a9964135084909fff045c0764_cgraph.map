@@ -1,0 +1,4 @@
+<map id="AdiI2CReadHandler" name="AdiI2CReadHandler">
+<area shape="rect" id="node1" title="Handler for I2C read command from control endpoint." alt="" coords="5,5,140,32"/>
+<area shape="rect" id="node2" href="$_i2c_functions_8c.html#ac92b37c3944dd6b38129523ae699bb6a" title="Parses I2C command data from the USB Buffer. Used for read/write/stream." alt="" coords="188,5,323,32"/>
+</map>

@@ -1,0 +1,24 @@
+<map id="AdiStreamThreadEntry" name="AdiStreamThreadEntry">
+<area shape="rect" id="node1" title="The entry point function for the StreamThread. Handles all streaming data captures." alt="" coords="5,132,159,159"/>
+<area shape="rect" id="node2" href="$_stream_thread_8c.html#aac634cda337a57ecf9a6500a3ec8180d" title="This is the worker function for the burst stream." alt="" coords="218,107,363,133"/>
+<area shape="rect" id="node3" href="$_error_log_8c.html#a56fa922a54ca2e52be68f8b4bd4f29ca" title="Logs a firmware error to flash memory for later examination." alt="" coords="446,107,537,133"/>
+<area shape="rect" id="node18" href="$_stream_thread_8c.html#a9dcce177a499e5348bb1d956af4839ca" title="This is the worker function for the generic stream." alt="" coords="211,259,370,285"/>
+<area shape="rect" id="node20" href="$_stream_thread_8c.html#a54288ca03b10afe4f2f5342424745dbd" title="This is the worker function for the I2C read stream." alt="" coords="224,157,357,184"/>
+<area shape="rect" id="node21" href="$_stream_thread_8c.html#a460392666d7c7e17adbcbf33a3e05be4" title="This is the worker function for the ADcmXL real time stream." alt="" coords="207,5,375,32"/>
+<area shape="rect" id="node22" href="$_stream_thread_8c.html#a62dffa40383d9ff601aa31e8485a9bc6" title="This is the worker function for the transfer stream." alt="" coords="211,56,371,83"/>
+<area shape="rect" id="node4" href="$_error_log_8c.html#ac2def3369d7999ab5c58dce043eccfb7" title="Parses the firmware version number from FirmwareID to a user provided buffer." alt="" coords="608,31,752,57"/>
+<area shape="rect" id="node6" href="$_error_log_8c.html#afa25d266c44a3f98d1ed22181cef2b4f" title="Prints an error log object to the debug console." alt="" coords="617,81,743,108"/>
+<area shape="rect" id="node7" href="$_error_log_8c.html#a94a7492bbf8dd7454a4abf2ed3b26f1c" title="Writes a log data structure to flash memory." alt="" coords="620,132,740,159"/>
+<area shape="rect" id="node5" href="$main_8c.html#a1e4f00a6649f71b6f7d737b7906b7ab3" title=" " alt="" coords="825,31,912,57"/>
+<area shape="rect" id="node8" href="$_flash_8c.html#a32675702d0694877caab6548579ba64b" title="Write a block of memory to flash, at the specified byte address." alt="" coords="985,132,1089,159"/>
+<area shape="rect" id="node14" href="$_error_log_8c.html#af872f4a84993f70c2a961fe793fd2d65" title="Gets address (in flash memory) for a new error log entry." alt="" coords="800,183,937,209"/>
+<area shape="rect" id="node17" href="$_error_log_8c.html#a92e80f7bc3d347c7df859cd9867c8ed1" title="Sets the error log count value in flash." alt="" coords="801,132,937,159"/>
+<area shape="rect" id="node9" href="$_flash_8c.html#aa6aa25bbcb93fe52d2c7ba77ba5a3d0d" title="Performs a transfer from the I2C flash memory." alt="" coords="1288,132,1388,159"/>
+<area shape="rect" id="node10" href="$_flash_8c.html#a5bad5719afeea09ceec372cff5625e61" title="De&#45;init the flash memory interfacing module." alt="" coords="1463,132,1570,159"/>
+<area shape="rect" id="node12" href="$_flash_8c.html#a040d4f474a0b1a17b0bd9d4ff3b19cc2" title="Initializes flash memory interface module." alt="" coords="1471,183,1562,209"/>
+<area shape="rect" id="node13" href="$_flash_8c.html#a38ad6ff735ff8984c32d90b3e76771c3" title="Gets the flash devices address, based on the requested byte address." alt="" coords="1436,81,1597,108"/>
+<area shape="rect" id="node11" href="$_i2c_functions_8c.html#a0fbdfdd8f2cc47ebebe8e16b2c97b6b5" title="Init I2C peripheral." alt="" coords="1645,183,1723,209"/>
+<area shape="rect" id="node15" href="$_error_log_8c.html#a2712cdc1e255d23690632841b58d21f6" title="Gets the log count from flash." alt="" coords="988,183,1087,209"/>
+<area shape="rect" id="node16" href="$_flash_8c.html#a763f7a7edcdf1e42756f7107ebe7121e" title="Read a block of memory from flash, at the specified byte address." alt="" coords="1137,183,1240,209"/>
+<area shape="rect" id="node19" href="$_spi_functions_8c.html#a1aafef1027cccda6ac0b87049e4e72af" title="Bi&#45;directional SPI transfer function, in register mode. Optimized for speed." alt="" coords="423,259,560,285"/>
+</map>

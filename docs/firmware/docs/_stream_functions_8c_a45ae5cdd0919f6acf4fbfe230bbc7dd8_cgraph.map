@@ -1,0 +1,19 @@
+<map id="AdiConfigureDrPin" name="AdiConfigureDrPin">
+<area shape="rect" id="node1" title="Configures the data ready pin as an input with edge interrupt triggering enabled." alt="" coords="5,81,132,108"/>
+<area shape="rect" id="node2" href="$_pin_functions_8c.html#aa3c19cd7624851187c6343b9990de817" title="configures the selected pin as an interrupt with edge triggering based on polarity" alt="" coords="180,81,341,108"/>
+<area shape="rect" id="node3" href="$_error_log_8c.html#a56fa922a54ca2e52be68f8b4bd4f29ca" title="Logs a firmware error to flash memory for later examination." alt="" coords="389,81,480,108"/>
+<area shape="rect" id="node4" href="$_error_log_8c.html#ac2def3369d7999ab5c58dce043eccfb7" title="Parses the firmware version number from FirmwareID to a user provided buffer." alt="" coords="528,5,672,32"/>
+<area shape="rect" id="node6" href="$_error_log_8c.html#afa25d266c44a3f98d1ed22181cef2b4f" title="Prints an error log object to the debug console." alt="" coords="537,56,663,83"/>
+<area shape="rect" id="node7" href="$_error_log_8c.html#a94a7492bbf8dd7454a4abf2ed3b26f1c" title="Writes a log data structure to flash memory." alt="" coords="540,107,660,133"/>
+<area shape="rect" id="node5" href="$main_8c.html#a1e4f00a6649f71b6f7d737b7906b7ab3" title=" " alt="" coords="745,5,832,32"/>
+<area shape="rect" id="node8" href="$_flash_8c.html#a32675702d0694877caab6548579ba64b" title="Write a block of memory to flash, at the specified byte address." alt="" coords="905,107,1009,133"/>
+<area shape="rect" id="node14" href="$_error_log_8c.html#af872f4a84993f70c2a961fe793fd2d65" title="Gets address (in flash memory) for a new error log entry." alt="" coords="720,157,857,184"/>
+<area shape="rect" id="node17" href="$_error_log_8c.html#a92e80f7bc3d347c7df859cd9867c8ed1" title="Sets the error log count value in flash." alt="" coords="721,107,857,133"/>
+<area shape="rect" id="node9" href="$_flash_8c.html#aa6aa25bbcb93fe52d2c7ba77ba5a3d0d" title="Performs a transfer from the I2C flash memory." alt="" coords="1208,107,1308,133"/>
+<area shape="rect" id="node10" href="$_flash_8c.html#a5bad5719afeea09ceec372cff5625e61" title="De&#45;init the flash memory interfacing module." alt="" coords="1383,56,1490,83"/>
+<area shape="rect" id="node12" href="$_flash_8c.html#a040d4f474a0b1a17b0bd9d4ff3b19cc2" title="Initializes flash memory interface module." alt="" coords="1391,107,1482,133"/>
+<area shape="rect" id="node13" href="$_flash_8c.html#a38ad6ff735ff8984c32d90b3e76771c3" title="Gets the flash devices address, based on the requested byte address." alt="" coords="1356,157,1517,184"/>
+<area shape="rect" id="node11" href="$_i2c_functions_8c.html#a0fbdfdd8f2cc47ebebe8e16b2c97b6b5" title="Init I2C peripheral." alt="" coords="1565,132,1643,159"/>
+<area shape="rect" id="node15" href="$_error_log_8c.html#a2712cdc1e255d23690632841b58d21f6" title="Gets the log count from flash." alt="" coords="908,157,1007,184"/>
+<area shape="rect" id="node16" href="$_flash_8c.html#a763f7a7edcdf1e42756f7107ebe7121e" title="Read a block of memory from flash, at the specified byte address." alt="" coords="1057,157,1160,184"/>
+</map>

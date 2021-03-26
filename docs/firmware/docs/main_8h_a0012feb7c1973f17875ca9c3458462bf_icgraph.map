@@ -1,0 +1,5 @@
+<map id="AdiGPIOEventHandler" name="AdiGPIOEventHandler">
+<area shape="rect" id="node1" title="This function handles GPIO interrupts and sets the appropriate flag in GpioHandler." alt="" coords="337,5,487,32"/>
+<area shape="rect" id="node2" href="$main_8h.html#a97ef5f1f7dd70bdb654bd2e0ed215a8e" title="This function sets up the necessary resources to start the ADI application." alt="" coords="197,5,289,32"/>
+<area shape="rect" id="node3" href="$main_8h.html#af455227720659b28782283fa0cafc5bc" title="This is a callback function to handle generic USB events." alt="" coords="5,5,149,32"/>
+</map>
