@@ -63,6 +63,7 @@ void AdiPrintSpiConfig(CyU3PSpiConfig_t config);
 CyU3PReturnStatus_t AdiRestartSpi();
 
 /* SPI data transfer functions */
+void AdiSpiPrepareForTransfer();
 void AdiSpiTransferWord(uint8_t *txBuf, uint8_t *rxBuf);
 CyU3PReturnStatus_t AdiTransferBytes(uint32_t writeData);
 CyU3PReturnStatus_t AdiWriteRegByte(uint16_t addr, uint8_t data);

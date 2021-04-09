@@ -254,6 +254,10 @@ CyU3PReturnStatus_t AdiTransferStreamStart()
 	CyU3PReturnStatus_t status = CY_U3P_SUCCESS;
 	uint16_t bytesRead;
 	CyU3PDmaChannelConfig_t dmaConfig =  {0};
+	uint16_t initialMOSIByteCount;
+	CyBool_t initialDrActive;
+	uint8_t * initialTxData;
+	uint8_t rxBuf[4];
 
 	/* Get the data from the control endpoint */
 	status = CyU3PUsbGetEP0Data(StreamThreadState.TransferByteLength, USBBuffer, &bytesRead);
@@ -288,6 +292,11 @@ CyU3PReturnStatus_t AdiTransferStreamStart()
 	StreamThreadState.BytesPerBuffer = USBBuffer[12];
 	StreamThreadState.BytesPerBuffer |= (USBBuffer[13] << 8);
 
+	/* Get initial MOSI byte count and DR active setting */
+	initialMOSIByteCount = USBBuffer[14];
+	initialMOSIByteCount |= (USBBuffer[15] << 8);
+	initialDrActive = (CyBool_t)USBBuffer[16];
+
 	AdiPrintStreamState();
 
 	/* Disable VBUS ISR */
@@ -297,7 +306,7 @@ CyU3PReturnStatus_t AdiTransferStreamStart()
 	CyU3PVicDisableInt(CY_U3P_VIC_GPIO_CORE_VECTOR);
 
 	/* If using DR triggering configure the selected pin as an input with the correct polarity */
-	if(FX3State.DrActive)
+	if(FX3State.DrActive || initialDrActive)
 	{
 		/* Configure the pin as an input with interrupts enabled on the selected edge */
 		AdiConfigureDrPin();
@@ -343,6 +352,43 @@ CyU3PReturnStatus_t AdiTransferStreamStart()
 
 	/* Enable timer hardware for stall */
 	AdiConfigStreamStallTimer();
+
+	/* Configure SPI port for transfer */
+	AdiSpiPrepareForTransfer();
+
+	if(initialMOSIByteCount != 0)
+	{
+		/* Initially set to just USB buffer */
+		initialTxData = USBBuffer;
+		/* Increment to end of repeated MOSI data */
+		initialTxData += (StreamThreadState.BytesPerBuffer + 17);
+		/* Waiting for data ready? */
+		if(initialDrActive)
+		{
+			/* Clear GPIO interrupts */
+			GPIO->lpp_gpio_simple[FX3State.DrPin] |= CY_U3P_LPP_GPIO_INTR;
+			/* Loop until interrupt is triggered */
+			while(!(GPIO->lpp_gpio_intr0 & (1 << FX3State.DrPin)));
+		}
+		/* Perform first transfer */
+		AdiSpiTransferWord(initialTxData, rxBuf);
+		/* Set the timer to 0 and clear interrupt flag */
+		GPIO->lpp_gpio_pin[ADI_TIMER_PIN_INDEX].timer = 0;
+		GPIO->lpp_gpio_pin[ADI_TIMER_PIN_INDEX].status |= CY_U3P_LPP_GPIO_INTR;
+		initialTxData += 4;
+		for(int txCnt = 4; txCnt < initialMOSIByteCount; txCnt+=4)
+		{
+			/* Wait for stall time */
+			while(!(GPIO->lpp_gpio_pin[ADI_TIMER_PIN_INDEX].status & CY_U3P_LPP_GPIO_INTR));
+			/* Transmit data */
+			AdiSpiTransferWord(initialTxData, rxBuf);
+			/* Set the timer to 0 and clear interrupt flag */
+			GPIO->lpp_gpio_pin[ADI_TIMER_PIN_INDEX].timer = 0;
+			GPIO->lpp_gpio_pin[ADI_TIMER_PIN_INDEX].status |= CY_U3P_LPP_GPIO_INTR;
+			/* Increment pointer */
+			initialTxData += 4;
+		}
+	}
 
 	/* Enable generic data capture thread */
 	status = CyU3PEventSet(&EventHandler, ADI_TRANSFER_STREAM_ENABLE, CYU3P_EVENT_OR);
@@ -997,6 +1043,9 @@ CyU3PReturnStatus_t AdiGenericStreamStart()
 
 	/* Enable timer for stall */
 	AdiConfigStreamStallTimer();
+
+	/* Configure SPI port */
+	AdiSpiPrepareForTransfer();
 
 	/* Enable generic data capture thread */
 	status = CyU3PEventSet (&EventHandler, ADI_GENERIC_STREAM_ENABLE, CYU3P_EVENT_OR);

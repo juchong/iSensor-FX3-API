@@ -15,6 +15,17 @@ Imports FX3USB
 Partial Class FX3Connection
 
     ''' <summary>
+    ''' SPI data to transmit at the start of a transfer stream. No read
+    ''' back performed
+    ''' </summary>
+    Private m_SPI32InitialMOSI As New List(Of UInteger)
+
+    ''' <summary>
+    ''' Track if initial MOSI data is transfered with DrActive
+    ''' </summary>
+    Private m_SPI32InitialDrActive As Boolean
+
+    ''' <summary>
     ''' This function performs a single bi-directional 32 bit SPI transaction. If DrActive is set to false the transfer is performed asynchronously. If DrActive is set to true, 
     ''' the transfer should wait until a data ready condition (determined by DrPin and DrPolarity) is true.
     ''' </summary>
@@ -95,6 +106,21 @@ Partial Class FX3Connection
     ''' <param name="numBuffers">The total number of data ready's to capture.</param>
     ''' <returns></returns>
     Public Function TransferArray(WriteData As IEnumerable(Of UInteger), numCaptures As UInteger, numBuffers As UInteger) As UInteger() Implements ISpi32Interface.TransferArray
+        'no initial MOSI data
+        m_SPI32InitialMOSI.Clear()
+
+        'call lower level implementation
+        Return TransferArrayImplementation(WriteData, numCaptures, numBuffers)
+    End Function
+
+    ''' <summary>
+    ''' Transfer array low level implementation
+    ''' </summary>
+    ''' <param name="WriteData"></param>
+    ''' <param name="numCaptures"></param>
+    ''' <param name="numBuffers"></param>
+    ''' <returns></returns>
+    Private Function TransferArrayImplementation(WriteData As IEnumerable(Of UInteger), numCaptures As UInteger, numBuffers As UInteger) As UInteger()
         Dim MISOData As New List(Of UInteger)
         Dim BytesPerUsbBuffer As UInteger
         Dim numTransfers As UInteger
@@ -141,7 +167,27 @@ Partial Class FX3Connection
         ISpi32TransferStreamDone()
 
         Return MISOData.ToArray()
+    End Function
 
+    ''' <summary>
+    ''' Array transfer which performs an initial SPI transmit (MOSI only, no read back) then
+    ''' starts a read stream. This is useful if you need to issue a write to the DUT, then 
+    ''' immediately start reading back data, without the USB transfer overhead of approx 150us
+    ''' </summary>
+    ''' <param name="InitialMOSIData">MOSI data to transmit before read (SPI words)</param>
+    ''' <param name="InitialDrActive">If the initial transmission is DR active or not</param>
+    ''' <param name="MOSIReadData">Data sent over the MOSI line during the transfer</param>
+    ''' <param name="NumBuffers">Number of buffers (samples) to read</param>
+    ''' <returns>MISO data from the DUT during the whole transfer</returns>
+    Public Function WriteReadTransferArray(InitialMOSIData As IEnumerable(Of UInteger), InitialDrActive As Boolean, MOSIReadData As IEnumerable(Of UInteger), NumBuffers As UInteger) As UInteger()
+        'set up MOSI array
+        m_SPI32InitialMOSI.Clear()
+        If Not IsNothing(InitialMOSIData) Then
+            m_SPI32InitialMOSI.AddRange(InitialMOSIData)
+        End If
+        m_SPI32InitialDrActive = InitialDrActive
+        'return lower level implementation
+        Return TransferArrayImplementation(MOSIReadData, 1, NumBuffers)
     End Function
 
     ''' <summary>
@@ -159,6 +205,9 @@ Partial Class FX3Connection
 
         Dim BytesPerUsbBuffer As UInteger
         Dim streamArgs As New List(Of UInteger)
+
+        'ensure there is no initial transmit data
+        m_SPI32InitialMOSI.Clear()
 
         'Set the total number of buffers to read
         m_TotalBuffersToRead = numBuffers
@@ -257,16 +306,16 @@ Partial Class FX3Connection
         Dim bytesMOSIData As UShort
 
         'Add numCaptures
-        buf.Add(CByte(numCaptures And &HFFUI))
-        buf.Add(CByte((numCaptures And &HFF00UI) >> 8))
-        buf.Add(CByte((numCaptures And &HFF0000UI) >> 16))
-        buf.Add(CByte((numCaptures And &HFF000000UI) >> 24))
+        buf.Add(CByte(numCaptures And &HFFUI))                  '0
+        buf.Add(CByte((numCaptures And &HFF00UI) >> 8))         '1
+        buf.Add(CByte((numCaptures And &HFF0000UI) >> 16))      '2
+        buf.Add(CByte((numCaptures And &HFF000000UI) >> 24))    '3
 
         'Add numBuffers
-        buf.Add(CByte(numBuffers And &HFFUI))
-        buf.Add(CByte((numBuffers And &HFF00UI) >> 8))
-        buf.Add(CByte((numBuffers And &HFF0000UI) >> 16))
-        buf.Add(CByte((numBuffers And &HFF000000UI) >> 24))
+        buf.Add(CByte(numBuffers And &HFFUI))                   '4
+        buf.Add(CByte((numBuffers And &HFF00UI) >> 8))          '5
+        buf.Add(CByte((numBuffers And &HFF0000UI) >> 16))       '6
+        buf.Add(CByte((numBuffers And &HFF000000UI) >> 24))     '7
 
         'Calculate the number of bytes per "register" buffer (iterating through write data numcapture times)
         bytesPerDrTransfer = CUInt(WriteData.Count() * 4UI * numCaptures)
@@ -288,18 +337,34 @@ Partial Class FX3Connection
         End If
 
         'Add bytes per buffer
-        buf.Add(CByte(bytesPerUsbBuffer And &HFFUI))
-        buf.Add(CByte((bytesPerUsbBuffer And &HFF00UI) >> 8))
-        buf.Add(CByte((bytesPerUsbBuffer And &HFF0000UI) >> 16))
-        buf.Add(CByte((bytesPerUsbBuffer And &HFF000000UI) >> 24))
+        buf.Add(CByte(bytesPerUsbBuffer And &HFFUI))                '8
+        buf.Add(CByte((bytesPerUsbBuffer And &HFF00UI) >> 8))       '9
+        buf.Add(CByte((bytesPerUsbBuffer And &HFF0000UI) >> 16))    '10
+        buf.Add(CByte((bytesPerUsbBuffer And &HFF000000UI) >> 24))  '11
 
         'Add Number of bytes of write (MOSI) data
         bytesMOSIData = CUShort(WriteData.Count() * 4UI)
-        buf.Add(CByte(bytesMOSIData And &HFFUI))
-        buf.Add(CByte((bytesMOSIData And &HFF00UI) >> 8))
+        buf.Add(CByte(bytesMOSIData And &HFFUI))                    '12
+        buf.Add(CByte((bytesMOSIData And &HFF00UI) >> 8))           '13
 
-        'Add the write (MOSI) data
+        'add number of bytes of initial transmit data
+        bytesMOSIData = CUShort(m_SPI32InitialMOSI.Count() * 4UI)
+        buf.Add(CByte(bytesMOSIData And &HFFUI))                    '14
+        buf.Add(CByte((bytesMOSIData And &HFF00UI) >> 8))           '15
+
+        'add initial transmit data Dr active setting
+        buf.Add(CByte(m_SPI32InitialDrActive))                      '16
+
+        'Add the MOSI data (repeated per transfer)
         For Each MOSIWord In WriteData
+            buf.Add(CByte(MOSIWord And &HFFUI))
+            buf.Add(CByte((MOSIWord And &HFF00UI) >> 8))
+            buf.Add(CByte((MOSIWord And &HFF0000UI) >> 16))
+            buf.Add(CByte((MOSIWord And &HFF000000UI) >> 24))
+        Next
+
+        'Add the initial MOSI data (sent once)
+        For Each MOSIWord In m_SPI32InitialMOSI
             buf.Add(CByte(MOSIWord And &HFFUI))
             buf.Add(CByte((MOSIWord And &HFF00UI) >> 8))
             buf.Add(CByte((MOSIWord And &HFF0000UI) >> 16))

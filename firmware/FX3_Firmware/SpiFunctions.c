@@ -53,6 +53,48 @@ static uint32_t SCLKInactiveMask;
 /** SCLK low period offset */
 static uint32_t SCLKLowTime;
 
+/** Word length for a register based SPI tranfer */
+static uint32_t SPIWordLen;
+
+/**
+  * @brief Set up the SPI for a register based transfer
+  *
+  * @returns void
+  *
+  * The process is as follows:
+  *
+  * (1) Disable SPI
+  * (2) Disable interrupts
+  * (3) Ensure Rx and Tx clear is disabled
+  * (4) Clear FIFOs
+  * (5) Set the file scope SPI word length variable
+ **/
+void AdiSpiPrepareForTransfer()
+{
+    /* Disable SPI block */
+    SPI->lpp_spi_config &= ~(CY_U3P_LPP_SPI_ENABLE);
+
+	/* Disable tx/rx clear flags */
+    SPI->lpp_spi_config &= ~(CY_U3P_LPP_SPI_TX_CLEAR | CY_U3P_LPP_SPI_RX_CLEAR);
+
+	/* Disable interrupts */
+	SPI->lpp_spi_intr_mask = 0;
+
+	/* Reset FIFO */
+	AdiSpiResetFifo(CyTrue, CyTrue);
+
+    /* Get the wordLen in bytes. Min. 1 byte */
+    SPIWordLen = ((SPI->lpp_spi_config & CY_U3P_LPP_SPI_WL_MASK) >> CY_U3P_LPP_SPI_WL_POS);
+    if ((SPIWordLen & 0x07) != 0)
+    {
+    	SPIWordLen = (SPIWordLen >> 3) + 1;
+    }
+    else
+    {
+    	SPIWordLen = (SPIWordLen >> 3);
+    }
+}
+
 /**
   * @brief Bi-directional SPI transfer function, in register mode. Optimized for speed.
   *
@@ -64,33 +106,7 @@ static uint32_t SCLKLowTime;
  **/
 void AdiSpiTransferWord(uint8_t *txBuf, uint8_t *rxBuf)
 {
-    uint32_t temp, intrMask;
-    uint8_t  wordLen;
-
-    /* Get the wordLen in bytes. Min. 1 byte */
-    wordLen = ((SPI->lpp_spi_config & CY_U3P_LPP_SPI_WL_MASK) >> CY_U3P_LPP_SPI_WL_POS);
-    if ((wordLen & 0x07) != 0)
-    {
-        wordLen = (wordLen >> 3) + 1;
-    }
-    else
-    {
-        wordLen = (wordLen >> 3);
-    }
-
-    /* Disable interrupts. */
-    intrMask = SPI->lpp_spi_intr_mask;
-    SPI->lpp_spi_intr_mask = 0;
-
-    /* Reset SPI FIFO */
-    SPI->lpp_spi_config |= (CY_U3P_LPP_SPI_TX_CLEAR | CY_U3P_LPP_SPI_RX_CLEAR);
-
-    /* Wait for done */
-	while ((SPI->lpp_spi_status & CY_U3P_LPP_SPI_TX_DONE) == 0);
-	while ((SPI->lpp_spi_status & CY_U3P_LPP_SPI_RX_DATA) != 0);
-
-	/* Disable tx/rx clear flags */
-    SPI->lpp_spi_config &= ~(CY_U3P_LPP_SPI_TX_CLEAR | CY_U3P_LPP_SPI_RX_CLEAR);
+	uint32_t temp;
 
     /* Enable the TX and RX bits. */
     SPI->lpp_spi_config |= CY_U3P_LPP_SPI_TX_ENABLE | CY_U3P_LPP_SPI_RX_ENABLE;
@@ -100,7 +116,7 @@ void AdiSpiTransferWord(uint8_t *txBuf, uint8_t *rxBuf)
 
     /* Place data in egress register */
     temp = 0;
-    switch (wordLen)
+    switch (SPIWordLen)
     {
         case 4:
             temp |= (txBuf[3] << 24);
@@ -124,7 +140,7 @@ void AdiSpiTransferWord(uint8_t *txBuf, uint8_t *rxBuf)
     temp = SPI->lpp_spi_ingress_data;
 
     /* Apply to buffer */
-    switch (wordLen)
+    switch (SPIWordLen)
     {
         case 4:
         	/* Word length of 4 bytes */
@@ -146,10 +162,6 @@ void AdiSpiTransferWord(uint8_t *txBuf, uint8_t *rxBuf)
 
     /* Disable the TX and RX. */
     SPI->lpp_spi_config &= ~(CY_U3P_LPP_SPI_TX_ENABLE | CY_U3P_LPP_SPI_RX_ENABLE);
-
-    /* Clear all interrupts and restore interrupt mask. */
-    SPI->lpp_spi_intr |= (CY_U3P_LPP_SPI_TX_DONE | CY_U3P_LPP_SPI_RX_DATA);
-    SPI->lpp_spi_intr_mask = intrMask;
 
     /* Disable SPI block */
     SPI->lpp_spi_config &= ~(CY_U3P_LPP_SPI_ENABLE);

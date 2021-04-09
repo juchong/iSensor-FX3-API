@@ -99,7 +99,7 @@ CyU3PDmaBuffer_t SpiDmaBuffer = {0};
  */
 
 /** Constant firmware ID string. Manually updated when releasing new version of the FX3 firmware. Must match FX3 API version number. */
-const uint8_t FirmwareID[32] __attribute__((aligned(32))) = "ADI FX3 REV 2.9.3-PUB\0";
+const uint8_t FirmwareID[32] __attribute__((aligned(32))) = "ADI FX3 REV 2.9.4-PUB\0";
 
 /** FX3 unique serial number. Set at runtime during the initialization process. */
 char serial_number[] __attribute__((aligned(32))) = {'0',0x00,'0',0x00,'0',0x00,'0',0x00, '0',0x00,'0',0x00,'0',0x00,'0',0x00, '0',0x00,'0',0x00,'0',0x00,'0',0x00, '0',0x00,'0',0x00,'0',0x00,'0',0x00};

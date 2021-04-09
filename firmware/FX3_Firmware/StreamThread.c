@@ -618,8 +618,8 @@ static CyU3PReturnStatus_t AdiTransferStreamWork()
 	{
 		/* Set the MOSI pointer to the base address of the USB Buffer*/
 		MOSIData = USBBuffer;
-		/* Increment by 14 so it now points at first MOSI data value */
-		MOSIData += 14;
+		/* Increment by 17 so it now points at first MOSI data value */
+		MOSIData += 17;
 		for(MOSIDataCount = 0; MOSIDataCount < StreamThreadState.BytesPerBuffer; MOSIDataCount += 4)
 		{
 			/* Wait for the complex GPIO timer to reach the stall time (except on first word) */
