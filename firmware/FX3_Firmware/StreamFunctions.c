@@ -89,6 +89,10 @@ CyU3PReturnStatus_t AdiStopAnyDataStream()
 		status = CY_U3P_ERROR_NOT_STARTED;
 	}
 
+#ifdef VERBOSE_MODE
+	CyU3PDebugPrint (4, "Stream cancel request received\r\n");
+#endif
+
 	/* Set kill stream early flag */
 	KillStreamEarly = CyTrue;
 

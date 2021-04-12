@@ -71,18 +71,6 @@ static uint32_t SPIWordLen;
  **/
 void AdiSpiPrepareForTransfer()
 {
-    /* Disable SPI block */
-    SPI->lpp_spi_config &= ~(CY_U3P_LPP_SPI_ENABLE);
-
-	/* Disable tx/rx clear flags */
-    SPI->lpp_spi_config &= ~(CY_U3P_LPP_SPI_TX_CLEAR | CY_U3P_LPP_SPI_RX_CLEAR);
-
-	/* Disable interrupts */
-	SPI->lpp_spi_intr_mask = 0;
-
-	/* Reset FIFO */
-	AdiSpiResetFifo(CyTrue, CyTrue);
-
     /* Get the wordLen in bytes. Min. 1 byte */
     SPIWordLen = ((SPI->lpp_spi_config & CY_U3P_LPP_SPI_WL_MASK) >> CY_U3P_LPP_SPI_WL_POS);
     if ((SPIWordLen & 0x07) != 0)
@@ -93,6 +81,31 @@ void AdiSpiPrepareForTransfer()
     {
     	SPIWordLen = (SPIWordLen >> 3);
     }
+
+    /* Disable SPI block */
+    SPI->lpp_spi_config &= ~(CY_U3P_LPP_SPI_ENABLE);
+
+    /* Ensure bit is cleared */
+    while((SPI->lpp_spi_config & CY_U3P_LPP_SPI_ENABLE) != 0u);
+
+	/* Disable tx/rx clear flags */
+    SPI->lpp_spi_config &= ~(CY_U3P_LPP_SPI_TX_CLEAR | CY_U3P_LPP_SPI_RX_CLEAR);
+
+	/* Disable interrupts */
+	SPI->lpp_spi_intr_mask = 0;
+
+    /* Reset SPI FIFO */
+    SPI->lpp_spi_config |= (CY_U3P_LPP_SPI_TX_CLEAR | CY_U3P_LPP_SPI_RX_CLEAR);
+
+    /* Wait for done */
+	while ((SPI->lpp_spi_status & CY_U3P_LPP_SPI_TX_DONE) == 0);
+	while ((SPI->lpp_spi_status & CY_U3P_LPP_SPI_RX_DATA) != 0);
+
+	/* Disable tx/rx clear flags */
+    SPI->lpp_spi_config &= ~(CY_U3P_LPP_SPI_TX_CLEAR | CY_U3P_LPP_SPI_RX_CLEAR);
+
+    /* Enable the TX and RX bits. */
+    SPI->lpp_spi_config |= CY_U3P_LPP_SPI_TX_ENABLE | CY_U3P_LPP_SPI_RX_ENABLE;
 }
 
 /**
@@ -107,9 +120,6 @@ void AdiSpiPrepareForTransfer()
 void AdiSpiTransferWord(uint8_t *txBuf, uint8_t *rxBuf)
 {
 	uint32_t temp;
-
-    /* Enable the TX and RX bits. */
-    SPI->lpp_spi_config |= CY_U3P_LPP_SPI_TX_ENABLE | CY_U3P_LPP_SPI_RX_ENABLE;
 
     /* Re-enable SPI block. */
     SPI->lpp_spi_config |= CY_U3P_LPP_SPI_ENABLE;
@@ -159,9 +169,6 @@ void AdiSpiTransferWord(uint8_t *txBuf, uint8_t *rxBuf)
             rxBuf[0] = (uint8_t)(temp & 0xFF);
             break;
     }
-
-    /* Disable the TX and RX. */
-    SPI->lpp_spi_config &= ~(CY_U3P_LPP_SPI_TX_ENABLE | CY_U3P_LPP_SPI_RX_ENABLE);
 
     /* Disable SPI block */
     SPI->lpp_spi_config &= ~(CY_U3P_LPP_SPI_ENABLE);
@@ -673,8 +680,11 @@ CyU3PReturnStatus_t AdiTransferBytes(uint32_t writeData)
 	writeBuffer[2] = (writeData & 0xFF0000) >> 16;
 	writeBuffer[3] = (writeData & 0xFF000000) >> 24;
 
-	/* perform SPI transfer */
+	/* Wait for SPI to free */
 	AdiWaitForSpiNotBusy();
+	/* Prepare for transfer */
+	AdiSpiPrepareForTransfer();
+	/* Perform transfer */
 	AdiSpiTransferWord(writeBuffer, readBuffer);
 
 	/* Load read data to be sent back via control endpoint */

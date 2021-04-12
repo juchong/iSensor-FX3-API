@@ -228,7 +228,7 @@ static CyU3PReturnStatus_t AdiGenericStreamWork()
 		MOSIPtr = StreamThreadState.RegList;
 
 		/* Transmit the first words without reading back */
-		CyU3PSpiTransmitWords(MOSIPtr, 2);
+		AdiSpiTransferWord(MOSIPtr, MISOPtr);
 
 		/* Increment the MOSI pointer*/
 		MOSIPtr += 2;
