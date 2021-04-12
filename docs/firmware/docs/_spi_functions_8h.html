@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="Analog-Devices-Logo.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ADI iSensor FX3 Firmware
-   &#160;<span id="projectnumber">v2.9.3-pub</span>
+   &#160;<span id="projectnumber">v2.9.4-pub</span>
    </div>
    <div id="projectbrief">Firmware for the Analog Devices EVAL-ADIS-FX3 IMU Evaluation Platform. This firmware can be compiled using the Cypress EZ USB Suite IDE</div>
   </td>
@@ -128,6 +128,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a72c5344f6d7ce3000731bd79737be26d"><td class="memItemLeft" align="right" valign="top">CyU3PReturnStatus_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_spi_functions_8h.html#a72c5344f6d7ce3000731bd79737be26d">AdiRestartSpi</a> ()</td></tr>
 <tr class="memdesc:a72c5344f6d7ce3000731bd79737be26d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function restarts the SPI controller.  <a href="_spi_functions_8h.html#a72c5344f6d7ce3000731bd79737be26d">More...</a><br /></td></tr>
 <tr class="separator:a72c5344f6d7ce3000731bd79737be26d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a203e203eca5524581fe971e5b67a9a0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_spi_functions_8h.html#a203e203eca5524581fe971e5b67a9a0c">AdiSpiPrepareForTransfer</a> ()</td></tr>
+<tr class="memdesc:a203e203eca5524581fe971e5b67a9a0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up the SPI for a register based transfer.  <a href="_spi_functions_8h.html#a203e203eca5524581fe971e5b67a9a0c">More...</a><br /></td></tr>
+<tr class="separator:a203e203eca5524581fe971e5b67a9a0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1aafef1027cccda6ac0b87049e4e72af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_spi_functions_8h.html#a1aafef1027cccda6ac0b87049e4e72af">AdiSpiTransferWord</a> (uint8_t *txBuf, uint8_t *rxBuf)</td></tr>
 <tr class="memdesc:a1aafef1027cccda6ac0b87049e4e72af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bi-directional SPI transfer function, in register mode. Optimized for speed.  <a href="_spi_functions_8h.html#a1aafef1027cccda6ac0b87049e4e72af">More...</a><br /></td></tr>
 <tr class="separator:a1aafef1027cccda6ac0b87049e4e72af"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -394,6 +397,28 @@ J. Chong (<a href="#" onclick="location.href='mai'+'lto:'+'jua'+'n.'+'cho'+'ng'+
   </dd>
 </dl>
 <p>This function writes directly to the SPI control register. It does not cause the toggle on the chip select line seen using the cypress API for setting the SPI word length. </p>
+
+</div>
+</div>
+<a id="a203e203eca5524581fe971e5b67a9a0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a203e203eca5524581fe971e5b67a9a0c">&#9670;&nbsp;</a></span>AdiSpiPrepareForTransfer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AdiSpiPrepareForTransfer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set up the SPI for a register based transfer. </p>
+<dl class="section return"><dt>Returns</dt><dd>void</dd></dl>
+<p>The process is as follows:</p>
+<p>(1) Disable SPI (2) Disable interrupts (3) Ensure Rx and Tx clear is disabled (4) Clear FIFOs (5) Set the file scope SPI word length variable </p>
 
 </div>
 </div>

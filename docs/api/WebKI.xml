@@ -127,6 +127,7 @@
   <HelpKINode Title="ChipSelectPolarity property" Url="html/b19164ee-0ca0-5cf0-6c08-54fa73158b3c.htm" />
   <HelpKINode Title="ClearBurstMode method" Url="html/0db9153e-9792-111c-4df9-b433ca651157.htm" />
   <HelpKINode Title="ClearErrorLog method" Url="html/907f1e92-42a0-60b7-8715-827644937de7.htm" />
+  <HelpKINode Title="ComponentSensor enumeration member" Url="html/ff5bd0a4-5894-648c-a639-f210d1d45fd6.htm" />
   <HelpKINode Title="Connect method" Url="html/4b6e5cd7-b945-45e2-6275-936e9b9b4a5e.htm" />
   <HelpKINode Title="Contains method" Url="html/dca41037-07eb-5adf-2647-4454d2ce1656.htm" />
   <HelpKINode Title="ConvertBufferDataToU32 method" Url="html/df849baa-d713-90d6-cba3-0ddf2698f98f.htm" />
@@ -424,6 +425,7 @@
   <HelpKINode Title="FX3Connection.WatchdogTimeoutSeconds property" Url="html/53fc52a6-d722-566b-8128-e528ceba524b.htm" />
   <HelpKINode Title="FX3Connection.WordCount property" Url="html/af129f70-ec8e-ba83-dba9-84003867000c.htm" />
   <HelpKINode Title="FX3Connection.WordLength property" Url="html/fd51c3f2-6254-8d71-64a0-8e63d51b3cb5.htm" />
+  <HelpKINode Title="FX3Connection.WriteReadTransferArray method" Url="html/f9111a0c-8350-dffb-dd54-36a0dc26e92b.htm" />
   <HelpKINode Title="FX3Connection.WriteRegByte method" Url="html/7470aa78-1dd1-b34f-92bb-eb104bcc74b4.htm" />
   <HelpKINode Title="FX3Connection.WriteRegWord method" Url="html/bd17d83e-656a-fb48-f222-fb658ea122a2.htm" />
   <HelpKINode Title="FX3ErrorLog class">
@@ -503,8 +505,6 @@
   <HelpKINode Title="FX3SPIConfig.StallTime property" Url="html/12609f8f-e0ff-3c77-fc9c-82c83b66ae5d.htm" />
   <HelpKINode Title="FX3SPIConfig.WordLength field" Url="html/f7014575-856c-3a0a-e99d-0193b3739ed3.htm" />
   <HelpKINode Title="FX3TimerBlock property" Url="html/30816788-86f4-5b3f-84e5-a97d8e6cd497.htm" />
-  <HelpKINode Title="FX3USB namespace" Url="html/9f5142ef-eb7c-2e0f-5e80-8be7aac03e49.htm" />
-  <HelpKINode Title="FX3USB.USB class" Url="html/ed03a85e-e486-17af-6597-caf580baeb71.htm" />
   <HelpKINode Title="FX3_GPIO1 property" Url="html/96e1f5a9-b989-801a-8619-73a4375bd56d.htm" />
   <HelpKINode Title="FX3_GPIO2 property" Url="html/062bb664-caed-6c19-103e-9d678e13bcbd.htm" />
   <HelpKINode Title="FX3_GPIO3 property" Url="html/2cc932b7-d462-e090-2200-515781160808.htm" />
@@ -573,8 +573,8 @@
   <HelpKINode Title="IsLSBFirst property" Url="html/f37c14dd-441b-f398-e41c-1f80b6033194.htm" />
   <HelpKINode Title="ISpi32StopStream method" Url="html/52a3102f-a983-352b-9eb6-7477399b0856.htm" />
   <HelpKINode Title="isPWMPin method" Url="html/fe7d19f7-40da-11f1-de8d-42c07116628f.htm" />
-  <HelpKINode Title="LegacyImu enumeration member" Url="html/5ccc3358-a671-dc2c-bb84-dbd123d82e9b.htm" />
   <HelpKINode Title="LegacyIMU enumeration member" Url="html/a664dc00-67b0-e1cf-2c27-cb6c9cf0cba5.htm" />
+  <HelpKINode Title="LegacyImu enumeration member" Url="html/5ccc3358-a671-dc2c-bb84-dbd123d82e9b.htm" />
   <HelpKINode Title="Line field" Url="html/55ac562f-ad43-6646-2e68-a11c063203ab.htm" />
   <HelpKINode Title="MeasureBusyPulse method" Url="html/b416fddf-98f9-01ef-1d88-f71bce9cf5e2.htm" />
   <HelpKINode Title="MeasurePinDelay method" Url="html/a3e67348-5853-6f1c-97d8-3e79b9328142.htm" />
@@ -626,6 +626,7 @@
   <HelpKINode Title="PinPWMInfo.ToString method" Url="html/228530e5-2a58-8c1b-5787-9b97a83ee0aa.htm" />
   <HelpKINode Title="PinStart property" Url="html/2de991c2-5a59-a394-9329-9e3a023b9669.htm" />
   <HelpKINode Title="PreambleData field" Url="html/1371ad76-14fd-0b24-5794-cdb3729f45b9.htm" />
+  <HelpKINode Title="PrintRegMap method" Url="html/322d898f-497e-aa20-b850-774a741c35dc.htm" />
   <HelpKINode Title="PullDown enumeration member" Url="html/43c2aa87-dcdc-3866-e332-9cb18194cbdc.htm" />
   <HelpKINode Title="PullUp enumeration member" Url="html/43c2aa87-dcdc-3866-e332-9cb18194cbdc.htm" />
   <HelpKINode Title="PulseDrive method" Url="html/80d24cdc-deef-3180-0111-e36fa9384cf1.htm" />
@@ -656,8 +657,8 @@
   <HelpKINode Title="ResetPin property" Url="html/323fa924-24da-f60d-2c4d-b0e63c274ee7.htm" />
   <HelpKINode Title="RestoreHardwareSpi method" Url="html/7bffc307-014c-a89b-8d5c-9978358c74bb.htm" />
   <HelpKINode Title="SCLK field" Url="html/bca90136-f9a9-b710-6290-c4e2455818c2.htm" />
-  <HelpKINode Title="SclkFrequency property" Url="html/6c81a4f6-5c6c-36a0-9c51-90450e3a156a.htm" />
   <HelpKINode Title="SCLKFrequency property" Url="html/705196d0-12a4-0bd3-2faa-f275f3ce5943.htm" />
+  <HelpKINode Title="SclkFrequency property" Url="html/6c81a4f6-5c6c-36a0-9c51-90450e3a156a.htm" />
   <HelpKINode Title="SCLKHalfPeriodTicks field" Url="html/8b8fd904-046d-798e-6492-b3b786d4e65b.htm" />
   <HelpKINode Title="SecondsToTimerTicks field" Url="html/e336c5ce-fc50-16cc-aa46-21cd4e3927ef.htm" />
   <HelpKINode Title="SensorType enumeration" Url="html/5ccc3358-a671-dc2c-bb84-dbd123d82e9b.htm" />
@@ -673,6 +674,7 @@
     <HelpKINode Title="Wrapper.SetPin Method " Url="html/8730818d-d34e-5ddb-1177-968747d9251e.htm" />
   </HelpKINode>
   <HelpKINode Title="SetPinResistorSetting method" Url="html/dd796022-2abc-efad-5a3e-4e7b657c01bb.htm" />
+  <HelpKINode Title="SetRegWordOrder method" Url="html/0dbd26a6-582b-cb00-a904-fbf9ee7cad94.htm" />
   <HelpKINode Title="SetSCLKFreq method" Url="html/3b4aec8f-0396-fa32-813d-8e920f93bd80.htm" />
   <HelpKINode Title="SetSpiStallTime method" Url="html/176d0dd2-7cae-6247-2cfe-bf66d9ed7b8a.htm" />
   <HelpKINode Title="SetupBurstMode method" Url="html/464bda3e-6bf3-722c-dab0-7e60d8597bff.htm" />
@@ -715,7 +717,10 @@
     <HelpKINode Title="Wrapper.StopPWM Method " Url="html/eccac9df-4150-366f-c2e8-c2189a3d77b7.htm" />
   </HelpKINode>
   <HelpKINode Title="StopRealTimeStreaming method" Url="html/c2c1b045-c7b9-563c-c316-d8d9827c26f1.htm" />
-  <HelpKINode Title="StopStream method" Url="html/47cb4928-2637-9c27-ed27-d149550fe939.htm" />
+  <HelpKINode Title="StopStream method">
+    <HelpKINode Title="FX3Connection.StopStream Method " Url="html/47cb4928-2637-9c27-ed27-d149550fe939.htm" />
+    <HelpKINode Title="Wrapper.StopStream Method " Url="html/6189d4a0-6dfd-f727-896d-831bd38ba29b.htm" />
+  </HelpKINode>
   <HelpKINode Title="StreamCommands enumeration" Url="html/d2139e79-c13d-ff58-4bcc-18a1d920e48b.htm" />
   <HelpKINode Title="StreamFinished event" Url="html/9a44759b-8b32-ff0a-55a5-c1f848d35857.htm" />
   <HelpKINode Title="StreamTimeoutSeconds property" Url="html/6888ab0a-2da7-f276-76d9-b5d69e4ff964.htm" />
@@ -736,13 +741,6 @@
   <HelpKINode Title="UpdateDutType method" Url="html/89b792e1-4cd6-147f-9d6f-e106a32db7b0.htm" />
   <HelpKINode Title="UpdateRegMap method" Url="html/984dd0e3-e79c-4175-999a-e26b8a263e4a.htm" />
   <HelpKINode Title="Uptime property" Url="html/8bac1b60-641b-4bf7-1deb-eb9a14b14543.htm" />
-  <HelpKINode Title="USB class">
-    <HelpKINode Title="USB Class" Url="html/ed03a85e-e486-17af-6597-caf580baeb71.htm" />
-    <HelpKINode Title="constructor" Url="html/ea3c699a-157a-9660-49ae-7be09b893278.htm" />
-    <HelpKINode Title="methods" Url="html/817a57f9-cf91-cc06-3c77-437063680ce8.htm" />
-  </HelpKINode>
-  <HelpKINode Title="USB.USB constructor" Url="html/ea3c699a-157a-9660-49ae-7be09b893278.htm" />
-  <HelpKINode Title="USB.XferData method" Url="html/0ddc94a1-a7eb-1fdd-178b-0adec274ddec.htm" />
   <HelpKINode Title="USBCommands enumeration" Url="html/addcd302-82e5-d9e4-5534-5086d9825406.htm" />
   <HelpKINode Title="UserLEDBlink method">
     <HelpKINode Title="FX3Connection.UserLEDBlink Method " Url="html/01886df4-a0c5-b5b2-46d6-9f81a92200c4.htm" />
@@ -782,6 +780,7 @@
   <HelpKINode Title="Wrapper.FX3 field" Url="html/3f9d1b0e-6d67-9974-9619-5b0dda94a0be.htm" />
   <HelpKINode Title="Wrapper.GetBufferedStreamDataPacket method" Url="html/ecc3c59f-fb12-3e72-c4a7-543f9cc1f270.htm" />
   <HelpKINode Title="Wrapper.MeasurePinFreq method" Url="html/48e5c02f-1006-f474-4048-be189bc1e556.htm" />
+  <HelpKINode Title="Wrapper.PrintRegMap method" Url="html/322d898f-497e-aa20-b850-774a741c35dc.htm" />
   <HelpKINode Title="Wrapper.ReadPin method" Url="html/3dc6b3f9-5f44-cd18-e612-992531a8b174.htm" />
   <HelpKINode Title="Wrapper.ReadSigned method" Url="html/b6f024df-f895-2045-5a79-52a3d7290a1a.htm" />
   <HelpKINode Title="Wrapper.ReadUnsigned method" Url="html/bcf92962-4445-6a68-891f-17624bfd660b.htm" />
@@ -791,11 +790,13 @@
   <HelpKINode Title="Wrapper.SetDrPin method" Url="html/2ae7d7d4-7622-abea-b278-4485b5d23618.htm" />
   <HelpKINode Title="Wrapper.SetDrPolarity method" Url="html/e2c540f2-5326-0760-0b59-23a4cac8dea7.htm" />
   <HelpKINode Title="Wrapper.SetPin method" Url="html/8730818d-d34e-5ddb-1177-968747d9251e.htm" />
+  <HelpKINode Title="Wrapper.SetRegWordOrder method" Url="html/0dbd26a6-582b-cb00-a904-fbf9ee7cad94.htm" />
   <HelpKINode Title="Wrapper.SetSCLKFreq method" Url="html/3b4aec8f-0396-fa32-813d-8e920f93bd80.htm" />
   <HelpKINode Title="Wrapper.SetSpiStallTime method" Url="html/176d0dd2-7cae-6247-2cfe-bf66d9ed7b8a.htm" />
   <HelpKINode Title="Wrapper.StartBufferedStream method" Url="html/303ad2b3-35e2-f0b9-a404-91d6b480bac7.htm" />
   <HelpKINode Title="Wrapper.StartPWM method" Url="html/4b3e14df-1e52-120a-900a-8d1b7bb7c86b.htm" />
   <HelpKINode Title="Wrapper.StopPWM method" Url="html/eccac9df-4150-366f-c2e8-c2189a3d77b7.htm" />
+  <HelpKINode Title="Wrapper.StopStream method" Url="html/6189d4a0-6dfd-f727-896d-831bd38ba29b.htm" />
   <HelpKINode Title="Wrapper.UpdateDutType method" Url="html/89b792e1-4cd6-147f-9d6f-e106a32db7b0.htm" />
   <HelpKINode Title="Wrapper.UpdateRegMap method" Url="html/984dd0e3-e79c-4175-999a-e26b8a263e4a.htm" />
   <HelpKINode Title="Wrapper.UserLEDBlink method" Url="html/2ba0bbc1-8760-6fc8-7e2a-8facde68f927.htm" />
@@ -804,9 +805,9 @@
   <HelpKINode Title="Wrapper.Wrapper constructor" Url="html/62051b43-0130-cc99-288f-936ecfbc0dd9.htm" />
   <HelpKINode Title="Wrapper.WriteSigned method" Url="html/9fdf9f18-a39c-3722-bd40-958ce53de102.htm" />
   <HelpKINode Title="Wrapper.WriteUnsigned method" Url="html/5471e370-7fd8-0ca6-8bd3-ca691e3ccef5.htm" />
+  <HelpKINode Title="WriteReadTransferArray method" Url="html/f9111a0c-8350-dffb-dd54-36a0dc26e92b.htm" />
   <HelpKINode Title="WriteRegByte method" Url="html/7470aa78-1dd1-b34f-92bb-eb104bcc74b4.htm" />
   <HelpKINode Title="WriteRegWord method" Url="html/bd17d83e-656a-fb48-f222-fb658ea122a2.htm" />
   <HelpKINode Title="WriteSigned method" Url="html/9fdf9f18-a39c-3722-bd40-958ce53de102.htm" />
   <HelpKINode Title="WriteUnsigned method" Url="html/5471e370-7fd8-0ca6-8bd3-ca691e3ccef5.htm" />
-  <HelpKINode Title="XferData method" Url="html/0ddc94a1-a7eb-1fdd-178b-0adec274ddec.htm" />
 </HelpKI>

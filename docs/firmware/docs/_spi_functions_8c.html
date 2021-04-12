@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="Analog-Devices-Logo.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ADI iSensor FX3 Firmware
-   &#160;<span id="projectnumber">v2.9.3-pub</span>
+   &#160;<span id="projectnumber">v2.9.4-pub</span>
    </div>
    <div id="projectbrief">Firmware for the Analog Devices EVAL-ADIS-FX3 IMU Evaluation Platform. This firmware can be compiled using the Cypress EZ USB Suite IDE</div>
   </td>
@@ -94,6 +94,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a076840fb075504de28bab8f97ec172d3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_spi_functions_8c.html#a076840fb075504de28bab8f97ec172d3">AdiWaitForSpiNotBusy</a> ()</td></tr>
 <tr class="memdesc:a076840fb075504de28bab8f97ec172d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits for the SPI controller busy bit to be not set.  <a href="_spi_functions_8c.html#a076840fb075504de28bab8f97ec172d3">More...</a><br /></td></tr>
 <tr class="separator:a076840fb075504de28bab8f97ec172d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a203e203eca5524581fe971e5b67a9a0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_spi_functions_8c.html#a203e203eca5524581fe971e5b67a9a0c">AdiSpiPrepareForTransfer</a> ()</td></tr>
+<tr class="memdesc:a203e203eca5524581fe971e5b67a9a0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up the SPI for a register based transfer.  <a href="_spi_functions_8c.html#a203e203eca5524581fe971e5b67a9a0c">More...</a><br /></td></tr>
+<tr class="separator:a203e203eca5524581fe971e5b67a9a0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1aafef1027cccda6ac0b87049e4e72af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_spi_functions_8c.html#a1aafef1027cccda6ac0b87049e4e72af">AdiSpiTransferWord</a> (uint8_t *txBuf, uint8_t *rxBuf)</td></tr>
 <tr class="memdesc:a1aafef1027cccda6ac0b87049e4e72af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bi-directional SPI transfer function, in register mode. Optimized for speed.  <a href="_spi_functions_8c.html#a1aafef1027cccda6ac0b87049e4e72af">More...</a><br /></td></tr>
 <tr class="separator:a1aafef1027cccda6ac0b87049e4e72af"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,6 +164,8 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>BulkBuffer</b> [12
 <tr class="separator:a0ac7786967a9e4b560588bec3af7a0a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c062728869f5d1364523836042c079b"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_spi_functions_8c.html#a1c062728869f5d1364523836042c079b">SCLKLowTime</a></td></tr>
 <tr class="separator:a1c062728869f5d1364523836042c079b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a13eba9f46ed269fc36c7be406ee29b"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_spi_functions_8c.html#a9a13eba9f46ed269fc36c7be406ee29b">SPIWordLen</a></td></tr>
+<tr class="separator:a9a13eba9f46ed269fc36c7be406ee29b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file contains all generic SPI read/write function implementations. </p>
@@ -490,6 +495,28 @@ J. Chong (<a href="#" onclick="location.href='mai'+'lto:'+'jua'+'n.'+'cho'+'ng'+
   </dd>
 </dl>
 <p>This function writes directly to the SPI control register. It does not cause the toggle on the chip select line seen using the cypress API for setting the SPI word length. </p>
+
+</div>
+</div>
+<a id="a203e203eca5524581fe971e5b67a9a0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a203e203eca5524581fe971e5b67a9a0c">&#9670;&nbsp;</a></span>AdiSpiPrepareForTransfer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AdiSpiPrepareForTransfer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set up the SPI for a register based transfer. </p>
+<dl class="section return"><dt>Returns</dt><dd>void</dd></dl>
+<p>The process is as follows:</p>
+<p>(1) Disable SPI (2) Disable interrupts (3) Ensure Rx and Tx clear is disabled (4) Clear FIFOs (5) Set the file scope SPI word length variable </p>
 
 </div>
 </div>
@@ -933,6 +960,29 @@ J. Chong (<a href="#" onclick="location.href='mai'+'lto:'+'jua'+'n.'+'cho'+'ng'+
 </table>
 </div><div class="memdoc">
 <p>Pointer to bit bang SPI SCLK pin </p>
+
+</div>
+</div>
+<a id="a9a13eba9f46ed269fc36c7be406ee29b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a13eba9f46ed269fc36c7be406ee29b">&#9670;&nbsp;</a></span>SPIWordLen</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t SPIWordLen</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Word length for a register based SPI tranfer </p>
 
 </div>
 </div>

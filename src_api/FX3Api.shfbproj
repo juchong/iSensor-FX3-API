@@ -14,17 +14,14 @@
     <Name>Documentation</Name>
     <!-- SHFB properties -->
     <FrameworkVersion>.NET Framework 4.5</FrameworkVersion>
-    <OutputPath>docs\api\</OutputPath>
+    <OutputPath>..\docs\api\</OutputPath>
     <HtmlHelpName>Documentation</HtmlHelpName>
     <Language>en-US</Language>
     <DocumentationSources>
       <DocumentationSource sourceFile="bin\Debug\FX3Api.xml" />
-      <DocumentationSource sourceFile="bin\Debug\FX3Api.dll" />
-      <DocumentationSource sourceFile="Resources\FX3ApiWrapper.dll" />
-      <DocumentationSource sourceFile="Resources\FX3ApiWrapper.xml" />
-      <DocumentationSource sourceFile="Resources\FX3USB.dll" />
-      <DocumentationSource sourceFile="Resources\FX3USB.xml" />
-    </DocumentationSources>
+<DocumentationSource sourceFile="bin\Debug\FX3Api.dll" />
+<DocumentationSource sourceFile="bin\Debug\FX3ApiWrapper.dll" />
+<DocumentationSource sourceFile="bin\Debug\FX3ApiWrapper.xml" /></DocumentationSources>
     <WarnOnMissingSourceContext>False</WarnOnMissingSourceContext>
     <HelpFileFormat>Website</HelpFileFormat>
     <SyntaxFilters>Standard</SyntaxFilters>

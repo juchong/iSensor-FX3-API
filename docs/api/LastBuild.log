@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2020.3.6.0" projectFile="C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\src_api\FX3Api.shfbproj" started="4/12/2021 2:10:42 PM">
+<buildStep step="Initializing">
+Finding tools...
+The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\&#39;
+Locating components in the following folder(s):
+    C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\src_api
+    C:\ProgramData\EWSoftware\Sandcastle Help File Builder\Components and Plug-Ins\
+    C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\
+Using framework reflection data for &#39;.NET Framework 4.5&#39; located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Data\.NETFramework&#39;
+Using presentation style &#39;VS2013&#39; located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013&#39;
+Loading and initializing plug-ins...
+Lightweight Website Style Version 2020.3.6.0
+Copyright &#169; 2006-2020, Eric Woodruff, All Rights Reserved
+Portions Copyright &#169; 2014, Sam Harwell, All Rights Reserved
+-------------------------------
+Clearing any prior web/markdown output...
+</buildStep>
+<buildStep step="ValidatingDocumentationSources">
+Validating and copying documentation source information
+Source: C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\src_api\bin\Debug\FX3Api.xml
+Source: C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\src_api\bin\Debug\FX3Api.dll
+    Found assembly &#39;C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\src_api\bin\Debug\FX3Api.dll&#39;
+Source: C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\src_api\bin\Debug\FX3ApiWrapper.dll
+    Found assembly &#39;C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\src_api\bin\Debug\FX3ApiWrapper.dll&#39;
+Source: C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\src_api\bin\Debug\FX3ApiWrapper.xml
+
+Copying XML comments files
+    C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\src_api\bin\Debug\FX3Api.xml -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\FX3Api.xml
+    C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\src_api\bin\Debug\FX3ApiWrapper.xml -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\FX3ApiWrapper.xml
+</buildStep>
+<buildStep step="GenerateSharedContent">
+Generating shared content files (en-US, English (United States))...
+<plugIn name="Lightweight Website Style" behavior="After" priority="1000">
+</plugIn>    Last step completed in 00:00:00.1217
+</buildStep>
+<buildStep step="GenerateApiFilter">
+Generating API filter for MRefBuilder...
+    Last step completed in 00:00:00.0189
+</buildStep>
+<buildStep step="GenerateReflectionInfo">
+Generating reflection information...
+[C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin\MSBuild.exe - GenerateRefInfo.proj]
+Build started 4/12/2021 2:10:44 PM.
+Project &quot;C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\GenerateRefInfo.proj&quot; on node 1 (default targets).
+PrepareForBuild:
+  Creating directory &quot;obj\Debug\&quot;.
+GenerateRefInfo:
+  MRefBuilder (v2020.3.6.0)
+  Copyright c 2006-2020, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2020, Eric Woodruff, All Rights Reserved.
+  No source code context base path specified.  Source context information is unavailable.
+  Loaded 2 assemblies for reflection and 1 dependency assemblies.
+  Using automatic redirect &#39;FX3Api, Version=2.9.4.0, Culture=neutral, PublicKeyToken=null&#39; in place of &#39;FX3Api, Version=2.9.3.0, Culture=neutral, PublicKeyToken=null&#39;
+  Wrote information on 2 namespaces, 30 types, and 408 members
+  Copying file from &quot;reflection.org&quot; to &quot;reflection.all&quot;.
+  XslTransform (v2020.3.6.0)
+  Copyright c 2006-2020, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2020, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\MergeDuplicates.xsl&#39;.
+Done Building Project &quot;C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\GenerateRefInfo.proj&quot; (default targets).
+    Last step completed in 00:00:01.2856
+</buildStep>
+<buildStep step="TransformReflectionInfo">
+Transforming reflection output...
+[C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin\MSBuild.exe - TransformManifest.proj]
+Build started 4/12/2021 2:10:45 PM.
+Project &quot;C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\TransformManifest.proj&quot; on node 1 (default targets).
+TransformManifest:
+  XslTransform (v2020.3.6.0)
+  Copyright c 2006-2020, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2020, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\\ProductionTransforms\ApplyVSDocModel.xsl&#39;.
+  Copying file from &quot;reflection.xml&quot; to &quot;reflection.nofilenames&quot;.
+  XslTransform (v2020.3.6.0)
+  Copyright c 2006-2020, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2020, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\AddFilenames.xsl&#39;.
+  XslTransform (v2020.3.6.0)
+  Copyright c 2006-2020, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2020, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\ReflectionToManifest.xsl&#39;.
+Done Building Project &quot;C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\TransformManifest.proj&quot; (default targets).
+    Last step completed in 00:00:01.0195
+</buildStep>
+<buildStep step="GenerateNamespaceSummaries">
+Generating namespace summary information...
+    Last step completed in 00:00:00.0259
+</buildStep>
+<buildStep step="CopyAdditionalContent">
+Copying additional content files...
+No additional content to copy
+    Last step completed in 00:00:00.0020
+</buildStep>
+<buildStep step="MergeTablesOfContents">
+Merging conceptual and additional tables of contents...
+    Last step completed in 00:00:00.0000
+</buildStep>
+<buildStep step="GenerateIntermediateTableOfContents">
+Generating intermediate table of contents file...
+[C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin\MSBuild.exe - GenerateIntermediateTOC.proj]
+Build started 4/12/2021 2:10:46 PM.
+Project &quot;C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\GenerateIntermediateTOC.proj&quot; on node 1 (default targets).
+GenerateIntermediateTOC:
+  XslTransform (v2020.3.6.0)
+  Copyright c 2006-2020, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2020, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\\ProductionTransforms\CreateVSToc.xsl&#39;.
+Done Building Project &quot;C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\GenerateIntermediateTOC.proj&quot; (default targets).
+Generating conceptual content intermediate TOC file...
+    Last step completed in 00:00:00.5900
+</buildStep>
+<buildStep step="CreateBuildAssemblerConfigs">
+Creating Sandcastle configuration files...
+    sandcastle.config
+    Last step completed in 00:00:00.4501
+</buildStep>
+<buildStep step="MergeCustomConfigs">
+Merging custom build component configurations
+C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\sandcastle.config
+  Updating reference topic configurations.
+  No conceptual content.  Removing conceptual content components.
+    Last step completed in 00:00:00.0050
+</buildStep>
+<buildStep step="BuildTopics">
+Building help topics...
+[C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin\MSBuild.exe - BuildTopics.proj]
+Build started 4/12/2021 2:10:47 PM.
+Project &quot;C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj&quot; on node 1 (default targets).
+BuildTopics:
+  BuildAssembler (v2020.3.6.0)
+  Copyright c 2006-2020, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2020, Eric Woodruff, All Rights Reserved.
+  Loading configuration...
+  Processing topics...
+BuildAssembler : warning : ResolveReferenceLinksComponent: [P:FX3Api.FX3Connection.BurstMode] Unknown reference link target &#39;P:AdisApi.IRegInterface.BurstMode&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.CancelStreamAsync] Unknown reference link target &#39;M:StreamDataLogger.IStreamEventProducer.CancelStreamAsync&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [P:FX3Api.FX3Connection.DIO1] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [P:FX3Api.FX3Connection.DIO2] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [P:FX3Api.FX3Connection.DIO3] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [P:FX3Api.FX3Connection.DIO4] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [P:FX3Api.FX3Connection.DrActive] Unknown reference link target &#39;P:AdisApi.IRegInterface.DrActive&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [P:FX3Api.FX3Connection.DrPin] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [P:FX3Api.FX3Connection.DrPin] Unknown reference link target &#39;P:AdisApi.ISpi32Interface.DrPin&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [P:FX3Api.FX3Connection.FX3_GPIO1] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [P:FX3Api.FX3Connection.FX3_GPIO2] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [P:FX3Api.FX3Connection.FX3_GPIO3] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [P:FX3Api.FX3Connection.FX3_GPIO4] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [P:FX3Api.FX3Connection.FX3_LOOPBACK1] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [P:FX3Api.FX3Connection.FX3_LOOPBACK2] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.GetBufferedStreamDataPacket] Unknown reference link target &#39;M:AdisApi.IRegInterface.GetBufferedStreamDataPacket&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.GetPinPWMInfo(AdisApi.IPinObject)] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.GetStreamDataPacketU16] Unknown reference link target &#39;M:AdisApi.IRegInterface.GetStreamDataPacketU16&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:FX3Api.FX3Connection.AdisApi#ISpi32Interface#DrActive] Missing &lt;summary&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [P:FX3Api.FX3Connection.AdisApi#ISpi32Interface#DrActive] Unknown reference link target &#39;P:AdisApi.ISpi32Interface.DrActive&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:FX3Api.FX3Connection.AdisApi#ISpi32Interface#DrPolarity] Missing &lt;summary&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [P:FX3Api.FX3Connection.AdisApi#ISpi32Interface#DrPolarity] Unknown reference link target &#39;P:AdisApi.ISpi32Interface.DrPolarity&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3Connection.AdisApi#ISpi32Interface#GetBufferedStreamDataPacket] Missing &lt;summary&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3Connection.AdisApi#ISpi32Interface#GetBufferedStreamDataPacket] Missing &lt;returns&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.AdisApi#ISpi32Interface#GetBufferedStreamDataPacket] Unknown reference link target &#39;M:AdisApi.ISpi32Interface.GetBufferedStreamDataPacket&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3Connection.AdisApi#ISpi32Interface#StartBufferedStream(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32,System.UInt32,System.Int32,System.ComponentModel.BackgroundWorker)] Missing &lt;summary&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3Connection.AdisApi#ISpi32Interface#StartBufferedStream(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32,System.UInt32,System.Int32,System.ComponentModel.BackgroundWorker)] Missing &lt;param name=&quot;WriteData&quot;/&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3Connection.AdisApi#ISpi32Interface#StartBufferedStream(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32,System.UInt32,System.Int32,System.ComponentModel.BackgroundWorker)] Missing &lt;param name=&quot;numCaptures&quot;/&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3Connection.AdisApi#ISpi32Interface#StartBufferedStream(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32,System.UInt32,System.Int32,System.ComponentModel.BackgroundWorker)] Missing &lt;param name=&quot;numBuffers&quot;/&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3Connection.AdisApi#ISpi32Interface#StartBufferedStream(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32,System.UInt32,System.Int32,System.ComponentModel.BackgroundWorker)] Missing &lt;param name=&quot;timeoutSeconds&quot;/&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3Connection.AdisApi#ISpi32Interface#StartBufferedStream(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32,System.UInt32,System.Int32,System.ComponentModel.BackgroundWorker)] Missing &lt;param name=&quot;worker&quot;/&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.AdisApi#ISpi32Interface#StartBufferedStream(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32,System.UInt32,System.Int32,System.ComponentModel.BackgroundWorker)] Unknown reference link target &#39;M:AdisApi.ISpi32Interface.StartBufferedStream(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32,System.UInt32,System.Int32,System.ComponentModel.BackgroundWorker)&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:FX3Api.FX3Connection.AdisApi#ISpi32Interface#StreamTimeoutSeconds] Missing &lt;summary&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [P:FX3Api.FX3Connection.AdisApi#ISpi32Interface#StreamTimeoutSeconds] Unknown reference link target &#39;P:AdisApi.ISpi32Interface.StreamTimeoutSeconds&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.ISpi32StopStream] Unknown reference link target &#39;M:AdisApi.ISpi32Interface.StopStream&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.isPWMPin(AdisApi.IPinObject)] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.MeasureBusyPulse(AdisApi.IPinObject,System.UInt32,System.UInt32,AdisApi.IPinObject,System.UInt32,System.UInt32)] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.MeasureBusyPulse(AdisApi.IPinObject,System.UInt32,System.UInt32,AdisApi.IPinObject,System.UInt32,System.UInt32)] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.MeasureBusyPulse(System.Byte[],AdisApi.IPinObject,System.UInt32,System.UInt32)] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.MeasurePinDelay(AdisApi.IPinObject,System.UInt32,AdisApi.IPinObject,System.UInt32)] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.MeasurePinDelay(AdisApi.IPinObject,System.UInt32,AdisApi.IPinObject,System.UInt32)] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.MeasurePinFreq(AdisApi.IPinObject,System.UInt32,System.UInt32,System.UInt16)] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [E:FX3Api.FX3Connection.NewBufferAvailable] Unknown reference link target &#39;T:StreamDataLogger.IStreamEventProducer.NewBufferAvailableEventHandler&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [E:FX3Api.FX3Connection.NewBufferAvailable] Unknown reference link target &#39;E:StreamDataLogger.IStreamEventProducer.NewBufferAvailable&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.PulseDrive(AdisApi.IPinObject,System.UInt32,System.Double,System.UInt32)] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.PulseDrive(AdisApi.IPinObject,System.UInt32,System.Double,System.UInt32)] Unknown reference link target &#39;M:AdisApi.IPinFcns.PulseDrive(AdisApi.IPinObject,System.UInt32,System.Double,System.UInt32)&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.PulseWait(AdisApi.IPinObject,System.UInt32,System.UInt32,System.UInt32)] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.PulseWait(AdisApi.IPinObject,System.UInt32,System.UInt32,System.UInt32)] Unknown reference link target &#39;M:AdisApi.IPinFcns.PulseWait(AdisApi.IPinObject,System.UInt32,System.UInt32,System.UInt32)&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.ReadDRFreq(AdisApi.IPinObject,System.UInt32,System.UInt32)] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.ReadPin(AdisApi.IPinObject)] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.ReadPin(AdisApi.IPinObject)] Unknown reference link target &#39;M:AdisApi.IPinFcns.ReadPin(AdisApi.IPinObject)&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.ReadPins(AdisApi.IPinObject[])] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.ReadPins(AdisApi.IPinObject[])] Unknown reference link target &#39;M:AdisApi.IPinFcns.ReadPins(AdisApi.IPinObject[])&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.ReadPins(System.Collections.Generic.IEnumerable{AdisApi.IPinObject})] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.ReadPins(System.Collections.Generic.IEnumerable{AdisApi.IPinObject})] Unknown reference link target &#39;M:AdisApi.IPinFcns.ReadPins(System.Collections.Generic.IEnumerable{AdisApi.IPinObject})&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.ReadRegArray(System.Collections.Generic.IEnumerable{AdisApi.AddrDataPair},System.UInt32)] Unknown reference link target &#39;T:AdisApi.AddrDataPair&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.ReadRegArray(System.Collections.Generic.IEnumerable{AdisApi.AddrDataPair},System.UInt32)] Unknown reference link target &#39;M:AdisApi.IRegInterface.ReadRegArray(System.Collections.Generic.IEnumerable{AdisApi.AddrDataPair},System.UInt32)&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.ReadRegArray(System.Collections.Generic.IEnumerable{System.UInt32})] Unknown reference link target &#39;M:AdisApi.IRegInterface.ReadRegArray(System.Collections.Generic.IEnumerable{System.UInt32})&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.ReadRegArray(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32)] Unknown reference link target &#39;M:AdisApi.IRegInterface.ReadRegArray(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32)&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.ReadRegArrayStream(System.Collections.Generic.IEnumerable{AdisApi.AddrDataPair},System.UInt32,System.UInt32)] Unknown reference link target &#39;T:AdisApi.AddrDataPair&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.ReadRegArrayStream(System.Collections.Generic.IEnumerable{AdisApi.AddrDataPair},System.UInt32,System.UInt32)] Unknown reference link target &#39;M:AdisApi.IRegInterface.ReadRegArrayStream(System.Collections.Generic.IEnumerable{AdisApi.AddrDataPair},System.UInt32,System.UInt32)&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3Connection.ReadRegArrayStream(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32,System.UInt32)] Missing &lt;summary&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3Connection.ReadRegArrayStream(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32,System.UInt32)] Missing &lt;returns&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3Connection.ReadRegArrayStream(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32,System.UInt32)] Missing &lt;param name=&quot;addr&quot;/&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3Connection.ReadRegArrayStream(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32,System.UInt32)] Missing &lt;param name=&quot;numCaptures&quot;/&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3Connection.ReadRegArrayStream(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32,System.UInt32)] Missing &lt;param name=&quot;numBuffers&quot;/&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.ReadRegArrayStream(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32,System.UInt32)] Unknown reference link target &#39;M:AdisApi.IRegInterface.ReadRegArrayStream(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32,System.UInt32)&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.ReadRegByte(System.UInt32)] Unknown reference link target &#39;M:AdisApi.IRegInterface.ReadRegByte(System.UInt32)&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.ReadRegWord(System.UInt32)] Unknown reference link target &#39;M:AdisApi.IRegInterface.ReadRegWord(System.UInt32)&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.ReadTime(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)] Unknown reference link target &#39;M:AdisApi.IPinFcns.ReadTime(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [P:FX3Api.FX3Connection.ReadyPin] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.Reset] Unknown reference link target &#39;M:AdisApi.IRegInterface.Reset&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [P:FX3Api.FX3Connection.ResetPin] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3Connection.SetBitBangSpiFreq(System.Double)] Missing &lt;returns&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.SetPin(AdisApi.IPinObject,System.UInt32)] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.SetPin(AdisApi.IPinObject,System.UInt32)] Unknown reference link target &#39;M:AdisApi.IPinFcns.SetPin(AdisApi.IPinObject,System.UInt32)&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.SetPinResistorSetting(AdisApi.IPinObject,FX3Api.FX3PinResistorSetting)] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.Start] Unknown reference link target &#39;M:AdisApi.IRegInterface.Start&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.StartBufferedStream(System.Collections.Generic.IEnumerable{AdisApi.AddrDataPair},System.UInt32,System.UInt32,System.Int32,System.ComponentModel.BackgroundWorker)] Unknown reference link target &#39;T:AdisApi.AddrDataPair&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.StartBufferedStream(System.Collections.Generic.IEnumerable{AdisApi.AddrDataPair},System.UInt32,System.UInt32,System.Int32,System.ComponentModel.BackgroundWorker)] Unknown reference link target &#39;M:AdisApi.IRegInterface.StartBufferedStream(System.Collections.Generic.IEnumerable{AdisApi.AddrDataPair},System.UInt32,System.UInt32,System.Int32,System.ComponentModel.BackgroundWorker)&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.StartBufferedStream(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32,System.UInt32,System.Int32,System.ComponentModel.BackgroundWorker)] Unknown reference link target &#39;M:AdisApi.IRegInterface.StartBufferedStream(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32,System.UInt32,System.Int32,System.ComponentModel.BackgroundWorker)&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3Connection.StartBurstStream(System.UInt32,System.Collections.Generic.IEnumerable{System.Byte})] Missing &lt;param name=&quot;burstTrigger&quot;/&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.StartGenericStream(System.Collections.Generic.IEnumerable{AdisApi.AddrDataPair},System.UInt32,System.UInt32)] Unknown reference link target &#39;T:AdisApi.AddrDataPair&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.StartPWM(System.Double,System.Double,AdisApi.IPinObject)] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3Connection.StartRealTimeStreaming(System.UInt32)] Missing &lt;param name=&quot;numFrames&quot;/&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.StartStream(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32)] Unknown reference link target &#39;M:AdisApi.IRegInterface.StartStream(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32)&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3Connection.StopPWM(AdisApi.IPinObject)] Missing &lt;param name=&quot;Pin&quot;/&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.StopPWM(AdisApi.IPinObject)] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.StopStream] Unknown reference link target &#39;M:AdisApi.IRegInterface.StopStream&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [E:FX3Api.FX3Connection.StreamFinished] Unknown reference link target &#39;T:StreamDataLogger.IStreamEventProducer.StreamFinishedEventHandler&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [E:FX3Api.FX3Connection.StreamFinished] Unknown reference link target &#39;E:StreamDataLogger.IStreamEventProducer.StreamFinished&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [P:FX3Api.FX3Connection.StreamTimeoutSeconds] Unknown reference link target &#39;P:AdisApi.IRegInterface.StreamTimeoutSeconds&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.Transfer(System.UInt32)] Unknown reference link target &#39;M:AdisApi.ISpi32Interface.Transfer(System.UInt32)&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.TransferArray(System.Collections.Generic.IEnumerable{System.UInt32})] Unknown reference link target &#39;M:AdisApi.ISpi32Interface.TransferArray(System.Collections.Generic.IEnumerable{System.UInt32})&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.TransferArray(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32)] Unknown reference link target &#39;M:AdisApi.ISpi32Interface.TransferArray(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32)&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3Connection.TransferArray(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32,System.UInt32)] Missing &lt;returns&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.TransferArray(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32,System.UInt32)] Unknown reference link target &#39;M:AdisApi.ISpi32Interface.TransferArray(System.Collections.Generic.IEnumerable{System.UInt32},System.UInt32,System.UInt32)&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [P:FX3Api.FX3Connection.TriggerReg] Unknown reference link target &#39;T:RegMapClasses.RegClass&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [P:FX3Api.FX3Connection.TriggerReg] Unknown reference link target &#39;T:RegMapClasses.RegClass&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3Connection.WaitForStreamCompletion] Missing &lt;returns&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.WriteRegByte(AdisApi.AddrDataPair)] Unknown reference link target &#39;T:AdisApi.AddrDataPair&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.WriteRegByte(AdisApi.AddrDataPair)] Unknown reference link target &#39;M:AdisApi.IRegInterface.WriteRegByte(AdisApi.AddrDataPair)&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.WriteRegByte(System.Collections.Generic.IEnumerable{AdisApi.AddrDataPair})] Unknown reference link target &#39;T:AdisApi.AddrDataPair&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.WriteRegByte(System.Collections.Generic.IEnumerable{AdisApi.AddrDataPair})] Unknown reference link target &#39;M:AdisApi.IRegInterface.WriteRegByte(System.Collections.Generic.IEnumerable{AdisApi.AddrDataPair})&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.WriteRegByte(System.Collections.Generic.IEnumerable{System.UInt32},System.Collections.Generic.IEnumerable{System.UInt32})] Unknown reference link target &#39;M:AdisApi.IRegInterface.WriteRegByte(System.Collections.Generic.IEnumerable{System.UInt32},System.Collections.Generic.IEnumerable{System.UInt32})&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.WriteRegByte(System.UInt32,System.UInt32)] Unknown reference link target &#39;M:AdisApi.IRegInterface.WriteRegByte(System.UInt32,System.UInt32)&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3Connection.WriteRegWord(System.UInt32,System.UInt32)] Missing &lt;param name=&quot;addr&quot;/&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3Connection.WriteRegWord(System.UInt32,System.UInt32)] Missing &lt;param name=&quot;data&quot;/&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3Connection.WriteRegWord(System.UInt32,System.UInt32)] Unknown reference link target &#39;M:AdisApi.IRegInterface.WriteRegWord(System.UInt32,System.UInt32)&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:FX3Api.FX3Connection.DisconnectFinishedEventHandler] Missing &lt;summary&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:FX3Api.FX3Connection.UnexpectedDisconnectEventHandler] Missing &lt;summary&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3ErrorLog.Equals(System.Object)] Missing &lt;summary&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3ErrorLog.Equals(System.Object)] Missing &lt;returns&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3ErrorLog.Equals(System.Object)] Missing &lt;param name=&quot;obj&quot;/&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3ErrorLog.Equals(System.Object,System.Object)] Missing &lt;summary&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3ErrorLog.Equals(System.Object,System.Object)] Missing &lt;returns&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3ErrorLog.Equals(System.Object,System.Object)] Missing &lt;param name=&quot;obj0&quot;/&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3ErrorLog.Equals(System.Object,System.Object)] Missing &lt;param name=&quot;obj1&quot;/&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3ErrorLog.ToString] Missing &lt;summary&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3ErrorLog.ToString] Missing &lt;returns&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3PinObject.#ctor(System.UInt32,System.Boolean)] Missing &lt;param name=&quot;invert&quot;/&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [P:FX3Api.FX3PinObject.Invert] Unknown reference link target &#39;P:AdisApi.IPinObject.Invert&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3PinObject.AdisApi#IPinObject#Equals(System.Object)] Missing &lt;summary&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3PinObject.AdisApi#IPinObject#Equals(System.Object)] Missing &lt;returns&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3PinObject.AdisApi#IPinObject#Equals(System.Object)] Missing &lt;param name=&quot;obj&quot;/&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3PinObject.AdisApi#IPinObject#Equals(System.Object)] Unknown reference link target &#39;M:AdisApi.IPinObject.Equals(System.Object)&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3PinObject.AdisApi#IPinObject#GetHashCode] Missing &lt;summary&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3PinObject.AdisApi#IPinObject#GetHashCode] Missing &lt;returns&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3PinObject.AdisApi#IPinObject#GetHashCode] Unknown reference link target &#39;M:AdisApi.IPinObject.GetHashCode&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3PinObject.AdisApi#IPinObject#ToString] Missing &lt;summary&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3PinObject.AdisApi#IPinObject#ToString] Missing &lt;returns&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.FX3PinObject.AdisApi#IPinObject#ToString] Unknown reference link target &#39;M:AdisApi.IPinObject.ToString&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [P:FX3Api.FX3PinObject.pinConfig] Unknown reference link target &#39;P:AdisApi.IPinObject.pinConfig&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3Api.FX3SPIConfig.#ctor(FX3Api.DeviceType,FX3Api.FX3BoardType)] Missing &lt;param name=&quot;BoardType&quot;/&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.PinList.Contains(AdisApi.IPinObject)] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:FX3Api.PinList.GetPinPWMInfo(AdisApi.IPinObject)] Unknown reference link target &#39;T:AdisApi.IPinObject&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3ApiWrapper.Wrapper.#ctor(System.String,System.String,FX3ApiWrapper.SensorType)] Missing &lt;param name=&quot;Type&quot;/&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [F:FX3ApiWrapper.Wrapper.Dut] Unknown reference link target &#39;T:adisInterface.IDutInterface&#39;. [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:FX3ApiWrapper.Wrapper.UpdateDutType(FX3ApiWrapper.SensorType)] Missing &lt;param name=&quot;Type&quot;/&gt; documentation [C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj]
+  Processed 415 topic(s)
+  139 warning(s)
+  CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 4 of 15.
+  CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 3 of 30.
+Done Building Project &quot;C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\BuildTopics.proj&quot; (default targets).
+    Last step completed in 00:00:06.7966
+</buildStep>
+<buildStep step="CombiningIntermediateTocFiles">
+Combining conceptual and API intermediate TOC files...
+    Last step completed in 00:00:00.0070
+</buildStep>
+<buildStep step="ExtractingHtmlInfo">
+Extracting HTML info for HTML Help 1 and/or website...
+[C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin\MSBuild.exe - ExtractHtmlInfo.proj]
+Sandcastle Help File Builder and Tools, version 2020.3.6.0
+Copyright c 2006-2020, Eric Woodruff, All Rights Reserved
+E-Mail: Eric@EWoodruff.us
+
+Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
+
+Processing website files in C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website
+Processed 415 HTML files
+Sorting keywords and generating See Also indices
+Saving website keyword index to C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\WebKI.xml
+Saving website table of contents to C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\WebTOC.xml
+    Last step completed in 00:00:00.6684
+</buildStep>
+<buildStep step="CopyStandardHelpContent">
+Copying standard help content...
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertCaution.png -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\AlertCaution.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertNote.png -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\AlertNote.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertSecurity.png -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\AlertSecurity.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\CFW.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\CFW.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\CodeExample.png -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\CodeExample.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\favicon.ico -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\favicon.ico
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privclass.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\privclass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privdelegate.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\privdelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privenumeration.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\privenumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privevent.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\privevent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privextension.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\privextension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privfield.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\privfield.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privinterface.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\privinterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privmethod.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\privmethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privproperty.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\privproperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privstructure.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\privstructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protclass.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\protclass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protdelegate.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\protdelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protenumeration.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\protenumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protevent.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\protevent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protextension.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\protextension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protfield.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\protfield.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protinterface.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\protinterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protmethod.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\protmethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protoperator.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\protoperator.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protproperty.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\protproperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protstructure.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\protstructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubclass.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\pubclass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubdelegate.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\pubdelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubenumeration.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\pubenumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubevent.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\pubevent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubextension.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\pubextension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubfield.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\pubfield.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubinterface.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\pubinterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubmethod.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\pubmethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\puboperator.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\puboperator.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubproperty.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\pubproperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubstructure.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\pubstructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\SectionCollapsed.png -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\SectionCollapsed.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\SectionExpanded.png -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\SectionExpanded.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\slMobile.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\slMobile.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\static.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\static.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\xna.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\xna.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\scripts\branding.js -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\scripts\branding.js
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-cs-CZ.css -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\styles\branding-cs-CZ.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-de-DE.css -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\styles\branding-de-DE.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-en-US.css -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\styles\branding-en-US.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-es-ES.css -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\styles\branding-es-ES.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-fr-FR.css -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\styles\branding-fr-FR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-Help1.css -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\styles\branding-Help1.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-HelpViewer.css -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\styles\branding-HelpViewer.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-it-IT.css -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\styles\branding-it-IT.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ja-JP.css -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\styles\branding-ja-JP.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ko-KR.css -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\styles\branding-ko-KR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-pl-PL.css -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\styles\branding-pl-PL.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-pt-BR.css -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\styles\branding-pt-BR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ru-RU.css -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\styles\branding-ru-RU.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-tr-TR.css -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\styles\branding-tr-TR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-Website.css -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\styles\branding-Website.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-CN.css -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\styles\branding-zh-CN.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-TW.css -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\styles\branding-zh-TW.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding.css -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\styles\branding.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\index.html -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\index.html
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\search.html -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\search.html
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\SearchHelp.aspx -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\SearchHelp.aspx
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\SearchHelp.inc.php -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\SearchHelp.inc.php
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\SearchHelp.php -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\SearchHelp.php
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\Web.Config -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\Web.Config
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\html\GeneralError.htm -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\html\GeneralError.htm
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\html\PageNotFound.htm -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\html\PageNotFound.htm
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\Search.png -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\Search.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocClose.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\TocClose.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocCollapsed.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\TocCollapsed.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocExpanded.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\TocExpanded.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocOpen.gif -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\icons\TocOpen.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\branding-Website.js -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\scripts\branding-Website.js
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\clipboard.min.js -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\scripts\clipboard.min.js
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\jquery-3.3.1.min.js -&gt; C:\Users\anolan3\Documents\FX3\iSensor-FX3-API\docs\api\Working\Output\Website\scripts\jquery-3.3.1.min.js
+    Last step completed in 00:00:00.7329
+</buildStep>
+<buildStep step="GenerateHelpFormatTableOfContents">
+Generating website table of contents file...
+    Last step completed in 00:00:00.0010
+</buildStep>
+<buildStep step="GenerateFullTextIndex">
+Generating full-text index for the website...
+
+<plugIn name="Lightweight Website Style" behavior="After" priority="1000">
+Adding lightweight search and TOC elements to each topic...
+</plugIn>    Last step completed in 00:00:02.5879
+</buildStep>
+<buildStep step="CopyingWebsiteFiles">
+Copying website files to output folder...
+
+Copied 500 files
+Copied 588 files for the website content
+    Last step completed in 00:00:06.6473
+</buildStep>
+<buildStep step="CleanIntermediates">
+Removing intermediate files...
+    Last step completed in 00:00:00.6562
+</buildStep>
+<buildStep step="Completed">
+
+Build completed successfully at 4/12/2021 2:11:05 PM.  Total time: 00:00:23.0294
+
+</buildStep>
+</shfbBuild>
