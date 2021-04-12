@@ -124,7 +124,7 @@ Partial Class FX3Connection
         m_ActiveFX3.ControlEndPt.Index = CUShort(StreamCommands.ADI_STREAM_STOP_CMD)
 
         'Send command to the DUT to stop streaming data
-        If Not XferControlData(buf, 4, 5000) Then
+        If Not XferControlData(buf, 4, 2000) Then
             Throw New FX3CommunicationException("ERROR: Timeout occurred while canceling a stream. Cancel USB ReqCode: 0x" + CUShort(ReqCode).ToString("X4"))
         End If
 
@@ -167,9 +167,6 @@ Partial Class FX3Connection
             buf(i + 8) = burstTrigger(i)
         Next
 
-        'Reinitialize the thread safe queue
-        m_StreamData = New ConcurrentQueue(Of UShort())
-
         ConfigureControlEndpoint(USBCommands.ADI_STREAM_BURST_DATA, True)
         m_ActiveFX3.ControlEndPt.Value = 0 'DNC
         m_ActiveFX3.ControlEndPt.Index = CUShort(StreamCommands.ADI_STREAM_START_CMD) 'Start stream
@@ -179,14 +176,14 @@ Partial Class FX3Connection
             Throw New FX3CommunicationException("ERROR: Timeout occurred while starting burst stream")
         End If
 
-        'Reset number of frames read
-        m_FramesRead = 0
-
         'Set the total number of frames to read
         m_TotalBuffersToRead = numBuffers
 
-        'Set the stream type
-        m_StreamType = StreamType.BurstStream
+        'Reset number of frames read
+        m_FramesRead = 0
+
+        'Reinitialize the thread safe queue
+        m_StreamData = New ConcurrentQueue(Of UShort())
 
         'Spin up a BurstStreamManager thread
         m_StreamThread = New Thread(AddressOf BurstStreamManager)
@@ -273,6 +270,9 @@ Partial Class FX3Connection
 
         'Wait until a lock can be acquired on the streaming end point
         m_StreamMutex.WaitOne()
+
+        'Set the stream type
+        m_StreamType = StreamType.BurstStream
 
         'Set the stream thread running state variable
         m_StreamThreadRunning = True
@@ -386,17 +386,14 @@ Partial Class FX3Connection
         'Perform generic stream setup (sends start command to control endpoint)
         GenericStreamSetup(addr, numCaptures, numBuffers)
 
-        'Reset frame counter
-        m_FramesRead = 0
-
         'Set the total number of frames to read
         m_TotalBuffersToRead = numBuffers
 
-        'Reinitialize the data queue
-        m_StreamData = New ConcurrentQueue(Of UShort())
+        'Reset number of frames read
+        m_FramesRead = 0
 
-        'Set the stream type
-        m_StreamType = StreamType.GenericStream
+        'Reinitialize the thread safe queue
+        m_StreamData = New ConcurrentQueue(Of UShort())
 
         'Start the Generic Stream Thread
         m_StreamThread = New Thread(AddressOf GenericStreamManager)
@@ -507,6 +504,9 @@ Partial Class FX3Connection
         'Wait until a lock can be acquired on the streaming end point
         m_StreamMutex.WaitOne()
 
+        'Set the stream type
+        m_StreamType = StreamType.GenericStream
+
         'Set the thread state flags
         m_StreamThreadRunning = True
 
@@ -604,9 +604,6 @@ Partial Class FX3Connection
 
         'Set the total number of frames to read
         m_TotalBuffersToRead = numFrames
-
-        'Set the stream type
-        m_StreamType = StreamType.RealTimeStream
 
         'Spin up a RealTimeStreamManager thread
         m_StreamThread = New Thread(AddressOf RealTimeStreamManager)
@@ -715,6 +712,9 @@ Partial Class FX3Connection
 
         'Wait until a lock can be acquired on the streaming end point
         m_StreamMutex.WaitOne()
+
+        'Set the stream type
+        m_StreamType = StreamType.RealTimeStream
 
         'Set the stream thread running state variable
         m_StreamThreadRunning = True

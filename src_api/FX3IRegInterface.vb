@@ -199,8 +199,11 @@ Partial Class FX3Connection
             Case StreamType.I2CReadStream
                 CancelStreamImplementation(USBCommands.ADI_I2C_READ_STREAM)
             Case Else
-                m_StreamType = StreamType.None
+                'no stream running
         End Select
+        'sleep for brief period to give the firmware time to cancel. This is kind of hacky (and should not be needed),
+        'but want to avoid potential for some sort of conflict if a cancel is issued then immediately after a stream start
+        System.Threading.Thread.Sleep(40)
     End Sub
 
     ''' <summary>
@@ -208,10 +211,8 @@ Partial Class FX3Connection
     ''' </summary>
     ''' <returns>The stream data packet, as a short</returns>
     Public Function GetBufferedStreamDataPacket() As UShort() Implements IRegInterface.GetBufferedStreamDataPacket
-
         'Wait for the frame (or buffer in case of IMU) and then return it
         Return GetBuffer()
-
     End Function
 
     ''' <summary>

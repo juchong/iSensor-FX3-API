@@ -212,13 +212,16 @@ Partial Class FX3Connection
         'Set the total number of buffers to read
         m_TotalBuffersToRead = numBuffers
 
+        'Reset frames read counter to 0
+        m_FramesRead = 0
+
+        'Create the 32 bit data queue
+        m_TransferStreamData = New ConcurrentQueue(Of UInteger())
+
         'Setup the stream
         BytesPerUsbBuffer = ISpi32TransferStreamSetup(WriteData, numCaptures, numBuffers)
         streamArgs.Add(BytesPerUsbBuffer)
         streamArgs.Add(CUInt(WriteData.Count() * 4 * numCaptures))
-
-        'Set the stream type
-        m_StreamType = StreamType.TransferStream
 
         'Start the streaming thread
         m_StreamThread = New Thread(AddressOf ISpi32InterfaceStreamWorker)
@@ -260,7 +263,7 @@ Partial Class FX3Connection
         End While
 
         If worker.WorkerSupportsCancellation And worker.CancellationPending Then
-            m_StreamThreadRunning = False
+            StopStream()
         End If
 
     End Sub
@@ -418,9 +421,6 @@ Partial Class FX3Connection
             Throw New FX3Exception("ERROR: Streaming application requires USB 2.0 or 3.0 connection to function")
         End If
 
-        'Create the 32 bit data queue
-        m_TransferStreamData = New ConcurrentQueue(Of UInteger())
-
         'Buffer to hold data from the FX3
         Dim buf(transferSize - 1) As Byte
 
@@ -430,8 +430,8 @@ Partial Class FX3Connection
         'Wait until a lock can be acquired on the streaming end point
         m_StreamMutex.WaitOne()
 
-        'Reset frames read counter to 0
-        m_FramesRead = 0
+        'Set the stream type
+        m_StreamType = StreamType.TransferStream
 
         'Set the thread state flags
         m_StreamThreadRunning = True
