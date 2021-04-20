@@ -696,11 +696,7 @@ CyU3PReturnStatus_t AdiRealTimeStreamFinished()
 	CyU3PVicEnableInt(CY_U3P_VIC_GCTL_PWR_VECTOR);
 
 	/* Restore the SPI state */
-	status = CyU3PSpiSetConfig(&FX3State.SpiConfig, NULL);
-	if(status != CY_U3P_SUCCESS)
-	{
-		AdiLogError(StreamFunctions_c, __LINE__, status);
-	}
+	AdiSetSpiWordLength(FX3State.SpiConfig.wordLen);
 
 	/* Reset KillStreamEarly flag in case the user wants to capture data again */
 	KillStreamEarly = CyFalse;
