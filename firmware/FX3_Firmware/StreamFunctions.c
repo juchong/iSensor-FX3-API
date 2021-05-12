@@ -360,6 +360,9 @@ CyU3PReturnStatus_t AdiTransferStreamStart()
 	/* Configure SPI port for transfer */
 	AdiSpiPrepareForTransfer();
 
+	/* Clear data ready interrupt */
+	GPIO->lpp_gpio_simple[FX3State.DrPin] |= CY_U3P_LPP_GPIO_INTR;
+
 	if(initialMOSIByteCount != 0)
 	{
 		/* Initially set to just USB buffer */
@@ -369,10 +372,10 @@ CyU3PReturnStatus_t AdiTransferStreamStart()
 		/* Waiting for data ready? */
 		if(initialDrActive)
 		{
-			/* Clear GPIO interrupts */
-			GPIO->lpp_gpio_simple[FX3State.DrPin] |= CY_U3P_LPP_GPIO_INTR;
 			/* Loop until interrupt is triggered */
 			while(!(GPIO->lpp_gpio_intr0 & (1 << FX3State.DrPin)));
+			/* Clear data ready interrupt */
+			GPIO->lpp_gpio_simple[FX3State.DrPin] |= CY_U3P_LPP_GPIO_INTR;
 		}
 		/* Perform first transfer */
 		AdiSpiTransferWord(initialTxData, rxBuf);
@@ -1046,6 +1049,9 @@ CyU3PReturnStatus_t AdiGenericStreamStart()
 
 	/* Configure SPI port */
 	AdiSpiPrepareForTransfer();
+
+	/* Clear data ready interrupt */
+	GPIO->lpp_gpio_simple[FX3State.DrPin] |= CY_U3P_LPP_GPIO_INTR;
 
 	/* Enable generic data capture thread */
 	status = CyU3PEventSet (&EventHandler, ADI_GENERIC_STREAM_ENABLE, CYU3P_EVENT_OR);

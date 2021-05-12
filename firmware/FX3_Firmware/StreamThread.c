@@ -215,10 +215,10 @@ static CyU3PReturnStatus_t AdiGenericStreamWork()
 	/* Wait for DR if enabled */
 	if (FX3State.DrActive)
 	{
-		/* Clear GPIO interrupts */
-		GPIO->lpp_gpio_simple[FX3State.DrPin] |= CY_U3P_LPP_GPIO_INTR;
 		/* Loop until interrupt is triggered */
 		while(!(GPIO->lpp_gpio_intr0 & (1 << FX3State.DrPin)));
+		/* Clear data ready interrupt */
+		GPIO->lpp_gpio_simple[FX3State.DrPin] |= CY_U3P_LPP_GPIO_INTR;
 	}
 
 	/* Run through the register list numCaptures times - this is one buffer */
@@ -603,10 +603,10 @@ static CyU3PReturnStatus_t AdiTransferStreamWork()
 	/* Wait for DR if enabled */
 	if (FX3State.DrActive)
 	{
-		/* Clear GPIO interrupts */
-		GPIO->lpp_gpio_simple[FX3State.DrPin] |= CY_U3P_LPP_GPIO_INTR;
 		/* Loop until interrupt is triggered */
 		while(!(GPIO->lpp_gpio_intr0 & (1 << FX3State.DrPin)));
+		/* Clear data ready interrupt */
+		GPIO->lpp_gpio_simple[FX3State.DrPin] |= CY_U3P_LPP_GPIO_INTR;
 	}
 
 	/* Set the pin timer to 0 */
