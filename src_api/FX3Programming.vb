@@ -17,6 +17,13 @@ Partial Class FX3Connection
 #Region "Connection Functions"
 
     ''' <summary>
+    ''' Connects to the first available serial number of the enumerated FX3 devices
+    ''' </summary>
+    Public Sub Connect() Implements AdisApi.USBInterface.Connect
+        Me.Connect(Me.AvailableFX3s(0))
+    End Sub
+
+    ''' <summary>
     ''' Attempts to program the selected FX3 board with the application firmware. The FX3 board should be programmed
     ''' with the ADI bootloader.
     ''' </summary>
@@ -197,7 +204,8 @@ Partial Class FX3Connection
     ''' <summary>
     ''' This function sends a reset command to the specified FX3 board, or does nothing if no board is connected
     ''' </summary>
-    Public Sub Disconnect()
+    Public Sub Disconnect() Implements AdisApi.USBInterface.Disconnect
+
 
         'Exit sub if we're not connected to an FX3 board
         If m_FX3Connected = False Then
@@ -374,6 +382,20 @@ Partial Class FX3Connection
         End If
 
         Return boardattached
+
+    End Function
+
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <returns></returns>
+    Public Function isConnected() As Boolean Implements AdisApi.USBInterface.IsConnected
+
+        If Me.ActiveFX3 IsNot Nothing Then
+            Return True
+        Else
+            Return False
+        End If
 
     End Function
 

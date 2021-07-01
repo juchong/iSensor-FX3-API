@@ -1060,6 +1060,10 @@ Partial Class FX3Connection
         SetPin(pin, 1)
     End Sub
 
+    Public Sub FlashLED() Implements AdisApi.USBInterface.FlashLed
+        Me.UserLEDBlink(3)
+    End Sub
+
     ''' <summary>
     ''' Blink user LED using timer hardware (not available on Cypress Explorer FX3 board)
     ''' </summary>

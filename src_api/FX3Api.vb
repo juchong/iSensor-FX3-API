@@ -20,7 +20,7 @@ Imports StreamDataLogger
 ''' in addition to a superset of extra interfacing functions specific to the FX3 platform.
 ''' </summary>
 Public Class FX3Connection
-    Implements IRegInterface, IPinFcns, ISpi32Interface, IStreamEventProducer
+    Implements IRegInterface, IPinFcns, ISpi32Interface, IStreamEventProducer, AdisApi.USBInterface
 
 #Region "Interface Variable Declaration"
 
